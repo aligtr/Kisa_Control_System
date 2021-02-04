@@ -1,0 +1,5 @@
+/LowLevelControl/build
+/LowLevelControl/.vscode/settings.json
+/LowLevelControl/.vscode/c_cpp_properties.json
+LowLevelControl/.vscode/.cortex-debug.peripherals.state.json
+LowLevelControl/.vscode/.cortex-debug.registers.state.json
