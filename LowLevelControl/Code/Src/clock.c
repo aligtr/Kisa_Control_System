@@ -1,5 +1,10 @@
 #include "clock.h"
 
+void Error_Handler(void)
+{
+
+}
+
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -44,3 +49,12 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 }
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  if (htim->Instance == TIM14) {
+    HAL_IncTick();
+  }
+}
+
+

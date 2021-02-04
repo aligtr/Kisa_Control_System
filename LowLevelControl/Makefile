@@ -37,7 +37,6 @@ BUILD_DIR = build
 # C sources
 C_SOURCES =  \
 Code/Src/main.c \
-Code/Src/stm32f7xx_it.c \
 Code/Src/stm32f7xx_hal_msp.c \
 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c \
 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c \
@@ -56,6 +55,17 @@ Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c \
 Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c \
 Drivers/STM32F7xx_HAL_Driver/clSrc/stm32f7xx_hal_exti.c \
 Code/Src/system_stm32f7xx.c \
+Code/Src/stm32f7xx_hal_timebase_tim.c \
+Code/Src/stm32f7xx_it.c \
+FreeRTOS/croutine.c \
+FreeRTOS/event_groups.c \
+FreeRTOS/heap_4.c \
+FreeRTOS/list.c \
+FreeRTOS/port.c \
+FreeRTOS/queue.c \
+FreeRTOS/stream_buffer.c \
+FreeRTOS/tasks.c \
+FreeRTOS/timers.c \
 Code/Src/clock.c \
 
 
@@ -120,6 +130,7 @@ C_INCLUDES =  \
 -IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F7xx/Include \
 -IDrivers/CMSIS/Include \
+-IFreeRTOS/include \
 
 
 # compile gcc flags
