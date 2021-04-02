@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\STM32_Files\Kisa_Control_System\Motors\Kisa_motors\SW4STM32"/>
+		<item value="C:\STM32_Files\Kisa_Control_System\Motors\Kisa_motors"/>
+	</list>
+</section>

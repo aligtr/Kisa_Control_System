@@ -1,0 +1,7 @@
+r
+h
+loadbin build\Bastet.hex 0x00
+g
+verifybin build\Bastet.hex, 0x00
+r
+q
