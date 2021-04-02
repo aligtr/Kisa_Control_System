@@ -1,5 +1,2 @@
 /Bastet/build
-//Bastet/build/.vscode/settings.json
-//Bastet/build/.vscode/c_cpp_properties.json
-/Bastet/build/.vscode/.cortex-debug.peripherals.state.json
-/Bastet/build/.vscode/.cortex-debug.registers.state.json
+/Bastet/.vscode
