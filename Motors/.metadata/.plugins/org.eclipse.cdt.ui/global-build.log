@@ -1,0 +1,908 @@
+13:08:40 **** Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/bus_voltage_sensor.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/bus_voltage_sensor.d" -MT"Middlewares/MotorControl/bus_voltage_sensor.o" -o "Middlewares/MotorControl/bus_voltage_sensor.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/bus_voltage_sensor.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/bus_voltage_sensor.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/circle_limitation.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/circle_limitation.d" -MT"Middlewares/MotorControl/circle_limitation.o" -o "Middlewares/MotorControl/circle_limitation.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/circle_limitation.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/circle_limitation.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/dac_common_ui.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/dac_common_ui.d" -MT"Middlewares/MotorControl/dac_common_ui.o" -o "Middlewares/MotorControl/dac_common_ui.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/dac_common_ui.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/dac_common_ui.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/digital_output.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/digital_output.d" -MT"Middlewares/MotorControl/digital_output.o" -o "Middlewares/MotorControl/digital_output.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/digital_output.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/digital_output.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/frame_communication_protocol.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/frame_communication_protocol.d" -MT"Middlewares/MotorControl/frame_communication_protocol.o" -o "Middlewares/MotorControl/frame_communication_protocol.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/frame_communication_protocol.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/frame_communication_protocol.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/hall_speed_pos_fdbk.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/hall_speed_pos_fdbk.d" -MT"Middlewares/MotorControl/hall_speed_pos_fdbk.o" -o "Middlewares/MotorControl/hall_speed_pos_fdbk.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/hall_speed_pos_fdbk.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/hall_speed_pos_fdbk.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/motor_power_measurement.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/motor_power_measurement.d" -MT"Middlewares/MotorControl/motor_power_measurement.o" -o "Middlewares/MotorControl/motor_power_measurement.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/motor_power_measurement.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/motor_power_measurement.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/ntc_temperature_sensor.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/ntc_temperature_sensor.d" -MT"Middlewares/MotorControl/ntc_temperature_sensor.o" -o "Middlewares/MotorControl/ntc_temperature_sensor.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/ntc_temperature_sensor.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/ntc_temperature_sensor.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/open_loop.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/open_loop.d" -MT"Middlewares/MotorControl/open_loop.o" -o "Middlewares/MotorControl/open_loop.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/open_loop.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/open_loop.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pid_regulator.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/pid_regulator.d" -MT"Middlewares/MotorControl/pid_regulator.o" -o "Middlewares/MotorControl/pid_regulator.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pid_regulator.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pid_regulator.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pqd_motor_power_measurement.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/pqd_motor_power_measurement.d" -MT"Middlewares/MotorControl/pqd_motor_power_measurement.o" -o "Middlewares/MotorControl/pqd_motor_power_measurement.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pqd_motor_power_measurement.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pqd_motor_power_measurement.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pwm_common.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/pwm_common.d" -MT"Middlewares/MotorControl/pwm_common.o" -o "Middlewares/MotorControl/pwm_common.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pwm_common.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pwm_common.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pwm_curr_fdbk.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/pwm_curr_fdbk.d" -MT"Middlewares/MotorControl/pwm_curr_fdbk.o" -o "Middlewares/MotorControl/pwm_curr_fdbk.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pwm_curr_fdbk.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/pwm_curr_fdbk.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Src/r3_2_g4xx_pwm_curr_fdbk.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/r3_2_g4xx_pwm_curr_fdbk.d" -MT"Middlewares/MotorControl/r3_2_g4xx_pwm_curr_fdbk.o" -o "Middlewares/MotorControl/r3_2_g4xx_pwm_curr_fdbk.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Src/r3_2_g4xx_pwm_curr_fdbk.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Src/r3_2_g4xx_pwm_curr_fdbk.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/r_divider_bus_voltage_sensor.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/r_divider_bus_voltage_sensor.d" -MT"Middlewares/MotorControl/r_divider_bus_voltage_sensor.o" -o "Middlewares/MotorControl/r_divider_bus_voltage_sensor.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/r_divider_bus_voltage_sensor.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/r_divider_bus_voltage_sensor.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/ramp_ext_mngr.d" -MT"Middlewares/MotorControl/ramp_ext_mngr.o" -o "Middlewares/MotorControl/ramp_ext_mngr.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/ramp_ext_mngr.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/speed_pos_fdbk.d" -MT"Middlewares/MotorControl/speed_pos_fdbk.o" -o "Middlewares/MotorControl/speed_pos_fdbk.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/speed_pos_fdbk.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/speed_torq_ctrl.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/speed_torq_ctrl.d" -MT"Middlewares/MotorControl/speed_torq_ctrl.o" -o "Middlewares/MotorControl/speed_torq_ctrl.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/speed_torq_ctrl.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/speed_torq_ctrl.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/state_machine.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/state_machine.d" -MT"Middlewares/MotorControl/state_machine.o" -o "Middlewares/MotorControl/state_machine.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/state_machine.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/state_machine.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/ui_irq_handler.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/ui_irq_handler.d" -MT"Middlewares/MotorControl/ui_irq_handler.o" -o "Middlewares/MotorControl/ui_irq_handler.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/ui_irq_handler.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/ui_irq_handler.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/usart_frame_communication_protocol.d" -MT"Middlewares/MotorControl/usart_frame_communication_protocol.o" -o "Middlewares/MotorControl/usart_frame_communication_protocol.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Src/usart_frame_communication_protocol.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/virtual_speed_sensor.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Middlewares/MotorControl/virtual_speed_sensor.d" -MT"Middlewares/MotorControl/virtual_speed_sensor.o" -o "Middlewares/MotorControl/virtual_speed_sensor.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/virtual_speed_sensor.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Src/virtual_speed_sensor.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_adc.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_adc.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_adc.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_adc_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_adc_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_adc_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_adc_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_comp.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_comp.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_comp.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_comp.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_comp.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_comp.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_cordic.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_cordic.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_cordic.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cordic.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_cortex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_cortex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_cortex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dac.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dac.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dac.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dac.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dac.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dac.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dac_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dac_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dac_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dac_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dac_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dac_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dma.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dma.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dma.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dma_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dma_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_dma_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_exti.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_exti.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_exti.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_fdcan.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_fdcan.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_fdcan.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash_ramfunc.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash_ramfunc.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_flash_ramfunc.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_gpio.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_gpio.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_gpio.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_opamp.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_opamp.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_opamp.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_opamp.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_opamp.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_opamp.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_opamp_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_opamp_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_opamp_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_opamp_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_opamp_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_opamp_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_pwr.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_pwr.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_pwr.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_pwr_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_pwr_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_pwr_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_rcc.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_rcc.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_rcc.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_rcc_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_rcc_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_rcc_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_tim.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_tim.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_tim.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_tim_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_tim_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_tim_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_uart.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_uart.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_uart.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_uart_ex.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_uart_ex.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_hal_uart_ex.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_uart_ex.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_adc.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_adc.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_adc.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_adc.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_pwr.d" -MT"Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_pwr.o" -o "Drivers/STM32G4xx_HAL_Driver/stm32g4xx_ll_pwr.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_ll_pwr.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/system_stm32g4xx.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Drivers/CMSIS/system_stm32g4xx.d" -MT"Drivers/CMSIS/system_stm32g4xx.o" -o "Drivers/CMSIS/system_stm32g4xx.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/system_stm32g4xx.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/system_stm32g4xx.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/dac_ui.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/dac_ui.d" -MT"Application/User/dac_ui.o" -o "Application/User/dac_ui.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/dac_ui.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/dac_ui.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c: In function 'HAL_FDCAN_RxFifo0Callback':
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:104:2: warning: implicit declaration of function 'memcpy' [-Wimplicit-function-declaration]
+  memcpy(data,msgData+1,7);
+  ^~~~~~
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:104:2: warning: incompatible implicit declaration of built-in function 'memcpy'
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:104:2: note: include '<string.h>' or provide a declaration of 'memcpy'
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_api.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/mc_api.d" -MT"Application/User/mc_api.o" -o "Application/User/mc_api.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_api.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_api.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_config.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/mc_config.d" -MT"Application/User/mc_config.o" -o "Application/User/mc_config.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_config.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_config.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_interface.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/mc_interface.d" -MT"Application/User/mc_interface.o" -o "Application/User/mc_interface.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_interface.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_interface.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_math.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/mc_math.d" -MT"Application/User/mc_math.o" -o "Application/User/mc_math.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_math.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_math.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_parameters.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/mc_parameters.d" -MT"Application/User/mc_parameters.o" -o "Application/User/mc_parameters.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_parameters.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_parameters.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_tasks.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/mc_tasks.d" -MT"Application/User/mc_tasks.o" -o "Application/User/mc_tasks.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_tasks.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/mc_tasks.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/motor_control_protocol.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/motor_control_protocol.d" -MT"Application/User/motor_control_protocol.o" -o "Application/User/motor_control_protocol.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/motor_control_protocol.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/motor_control_protocol.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/motorcontrol.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/motorcontrol.d" -MT"Application/User/motorcontrol.o" -o "Application/User/motorcontrol.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/motorcontrol.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/motorcontrol.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/regular_conversion_manager.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/regular_conversion_manager.d" -MT"Application/User/regular_conversion_manager.o" -o "Application/User/regular_conversion_manager.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/regular_conversion_manager.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/regular_conversion_manager.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_hal_msp.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/stm32g4xx_hal_msp.d" -MT"Application/User/stm32g4xx_hal_msp.o" -o "Application/User/stm32g4xx_hal_msp.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_hal_msp.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_hal_msp.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_it.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/stm32g4xx_it.d" -MT"Application/User/stm32g4xx_it.o" -o "Application/User/stm32g4xx_it.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_it.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_it.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_mc_it.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/stm32g4xx_mc_it.d" -MT"Application/User/stm32g4xx_mc_it.o" -o "Application/User/stm32g4xx_mc_it.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_mc_it.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/stm32g4xx_mc_it.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/ui_task.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/ui_task.d" -MT"Application/User/ui_task.o" -o "Application/User/ui_task.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/ui_task.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/ui_task.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/user_interface.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/user_interface.d" -MT"Application/User/user_interface.o" -o "Application/User/user_interface.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/user_interface.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/user_interface.c
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/SW4STM32/startup_stm32g431xx.s
+Invoking: MCU GCC Assembler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-as -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -g -o "Application/SW4STM32/startup_stm32g431xx.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/SW4STM32/startup_stm32g431xx.s"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/SW4STM32/startup_stm32g431xx.s
+ 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/SW4STM32/syscalls.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/SW4STM32/syscalls.d" -MT"Application/SW4STM32/syscalls.o" -o "Application/SW4STM32/syscalls.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/SW4STM32/syscalls.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/SW4STM32/syscalls.c
+ 
+Building file: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF".metadata/.plugins/org.eclipse.cdt.make.core/specs.d" -MT".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" -o ".metadata/.plugins/org.eclipse.cdt.make.core/specs.o" "../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c"
+Finished building: ../.metadata/.plugins/org.eclipse.cdt.make.core/specs.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40212	   1524	   3060	  44796	   aefc	Kisa_motors.elf
+ 
+13:15:30 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c: In function 'HAL_FDCAN_RxFifo0Callback':
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:116:42: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+      MCI_ExecSpeedRamp(pMCI[0],data[1]<<8+data[2],0);
+                                         ~^~~~~~~~
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40244	   1524	   3060	  44828	   af1c	Kisa_motors.elf
+ 
+13:27:17 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:27:57 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c: In function 'HAL_FDCAN_RxFifo0Callback':
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:116:39: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+      MCI_ExecSpeedRamp(pMCI[0],data[1]+data[2]<<8,0);
+                                ~~~~~~~^~~~~~~~
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40244	   1524	   3060	  44828	   af1c	Kisa_motors.elf
+ 
+13:28:02 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:29:19 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c: In function 'HAL_FDCAN_RxFifo0Callback':
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:116:39: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+      MCI_ExecSpeedRamp(pMCI[0],data[1]+data[2]<<8,1);
+                                ~~~~~~~^~~~~~~~
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40244	   1524	   3060	  44828	   af1c	Kisa_motors.elf
+ 
+13:29:25 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:32:15 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:35:25 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:36:26 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40236	   1524	   3060	  44820	   af14	Kisa_motors.elf
+ 
+13:36:32 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:39:52 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40236	   1524	   3060	  44820	   af14	Kisa_motors.elf
+ 
+13:39:57 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:42:00 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40236	   1524	   3060	  44820	   af14	Kisa_motors.elf
+ 
+13:42:04 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:42:16 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:44:01 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:53:51 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c: In function 'HAL_FDCAN_RxFifo0Callback':
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:114:42: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+      MCI_ExecSpeedRamp(pMCI[0],msgData[1]+msgData[2]<<8,1);
+                                ~~~~~~~~~~^~~~~~~~~~~
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40244	   1524	   3060	  44828	   af1c	Kisa_motors.elf
+ 
+13:53:56 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:54:40 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:55:04 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40236	   1524	   3060	  44820	   af14	Kisa_motors.elf
+ 
+13:55:08 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:55:31 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:56:22 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c: In function 'HAL_FDCAN_RxFifo0Callback':
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:114:42: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+      MCI_ExecSpeedRamp(pMCI[0],msgData[1]+msgData[2]<<8,1);
+                                ~~~~~~~~~~^~~~~~~~~~~
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40244	   1524	   3060	  44828	   af1c	Kisa_motors.elf
+ 
+13:56:26 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:57:11 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c: In function 'HAL_FDCAN_RxFifo0Callback':
+C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c:115:25: warning: suggest parentheses around '+' inside '<<' [-Wparentheses]
+      newSpeed=msgData[1]+msgData[2]<<8;
+               ~~~~~~~~~~^~~~~~~~~~~
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40244	   1524	   3060	  44828	   af1c	Kisa_motors.elf
+ 
+13:57:17 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+13:58:08 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40244	   1524	   3060	  44828	   af1c	Kisa_motors.elf
+ 
+13:58:13 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+14:04:16 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  39892	   1524	   3060	  44476	   adbc	Kisa_motors.elf
+ 
+14:04:23 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+14:08:29 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40244	   1524	   3060	  44828	   af1c	Kisa_motors.elf
+ 
+14:08:40 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+14:10:57 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40260	   1524	   3060	  44844	   af2c	Kisa_motors.elf
+ 
+14:11:02 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+15:01:16 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40372	   1524	   3060	  44956	   af9c	Kisa_motors.elf
+ 
+15:01:24 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+15:07:11 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40380	   1524	   3060	  44964	   afa4	Kisa_motors.elf
+ 
+15:07:16 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+15:08:18 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+15:56:27 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+15:56:38 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+15:58:32 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+15:59:13 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40260	   1524	   3060	  44844	   af2c	Kisa_motors.elf
+ 
+15:59:19 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+16:00:06 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40380	   1524	   3060	  44964	   afa4	Kisa_motors.elf
+ 
+16:00:12 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.

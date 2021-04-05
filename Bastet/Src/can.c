@@ -62,11 +62,11 @@ void HAL_CAN_MspInit(CAN_HandleTypeDef* canHandle)
     __HAL_RCC_CAN3_CLK_ENABLE();
     __HAL_RCC_CAN2_CLK_ENABLE();
     __HAL_RCC_CAN1_CLK_ENABLE();
-  
+
     __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**CAN3 GPIO Configuration    
+    /**CAN3 GPIO Configuration
     PA8     ------> CAN3_RX
-    PA15     ------> CAN3_TX 
+    PA15     ------> CAN3_TX
     */
     GPIO_InitStruct.Pin = GPIO_PIN_8|GPIO_PIN_15;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -96,10 +96,10 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
     __HAL_RCC_CAN3_CLK_DISABLE();
     __HAL_RCC_CAN2_CLK_DISABLE();
     __HAL_RCC_CAN1_CLK_DISABLE();
-  
-    /**CAN3 GPIO Configuration    
+
+    /**CAN3 GPIO Configuration
     PA8     ------> CAN3_RX
-    PA15     ------> CAN3_TX 
+    PA15     ------> CAN3_TX
     */
     HAL_GPIO_DeInit(GPIOA, GPIO_PIN_8|GPIO_PIN_15);
 
@@ -109,7 +109,7 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
 
   /* USER CODE END CAN3_MspDeInit 1 */
   }
-} 
+}
 
 /* USER CODE BEGIN 1 */
 // uint8_t CANTransmitt(CAN_HandleTypeDef* canHandle,uint8_t* data,uint32_t messageID)

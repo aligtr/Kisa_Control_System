@@ -63,13 +63,16 @@ HAL_StatusTypeDef motorRealeseCommand(Motor_t motor)
             return HAL_OK;    
         }
         arrayCopy(&motor.speed,&frame.data,2);
-        // for(i=0;i<sizeof(motor.speed);i++)
-        // {
-        //     frame.data[i]=motor.speed>>i;
-        // }
-        // break;
-    default:
         break;
+    case SET_SPEED_PID:
+        arrayCopy(&motor.speedPID,&frame.data,sizeof(uint16_t)*3);
+        break;
+    case SET_FLUX_PID:
+        arrayCopy(&motor.fluxPID,&frame.data,sizeof(uint16_t)*3);
+        break;
+    case SET_TORQUE_PID:
+        arrayCopy(&motor.torquePID,&frame.data,sizeof(uint16_t)*3);
+        break;        
     }
     frame.id = motor.motorID;
     frame.frameType=motor.command;
