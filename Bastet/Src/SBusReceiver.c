@@ -1,15 +1,21 @@
 #include "SBusReceiver.h"
 
+
+UART_HandleTypeDef huart3;
+
 void uartRxDMATransferCallback(DMA_HandleTypeDef *dmaHandle)
 {
   
 }
 
+uint8_t buffer[100];
+
 void receiveSBusDate(uint16_t* channels){
-	uint8_t buffer[50]={0};
+	
 	uint8_t i=0;
-	HAL_UART_Receive_DMA(&huart2, (uint8_t*)buffer,50);
-	for (i = 0; i < 50; i++)
+	HAL_UART_Receive_DMA(&huart3,buffer,100);
+	HAL_Delay(100);
+	for (i = 0; i < 100; i++)
 	{
 		if (buffer[i] == 0x0f) break;
 	}

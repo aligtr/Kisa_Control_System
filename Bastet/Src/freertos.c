@@ -148,7 +148,7 @@ void MX_FREERTOS_Init(void) {
   vMotorControlHandle = osThreadCreate(osThread(vMotorControl), NULL);
 
   /* definition and creation of vServoControl */
-  osThreadDef(vServoControl, vServoControlTask, 5, 0, 512);
+  osThreadDef(vServoControl, vServoControlTask, 3, 0, 256);
   vServoControlHandle = osThreadCreate(osThread(vServoControl), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -228,10 +228,10 @@ void vPDUReaderTask(void const * argument)
   /* USER CODE BEGIN vPDUReaderTask */
   /* Infinite loop */
   PduData_t pduData;
-	uint16_t channels[18]={0};
+	uint16_t channels[18];
 	while (1)
   {
-		receiveSBusDate(&channels);
+		receiveSBusDate(channels);
 		pduData.vel_mean=channels[RIGHT_VERT];
 		pduData.dir_mean=channels[RIGHT_HORIZ];
 		pduData.rx_mean=channels[LEFT_VERT];
@@ -332,6 +332,7 @@ void vServoControlTask(void const * argument)
 	}
   /* USER CODE END vServoControlTask */
 }
+
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
      
