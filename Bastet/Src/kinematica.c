@@ -24,7 +24,7 @@ double sign(double a){
 	else return 0;
 }
 
-void kinematica(uint32_t mode, Motor_t* Motors, servo_t* Servo){
+void kinematica(uint32_t mode, Motor_t* Motors, servoTarget_t* Servo){
 	float x,y;
 	float Rfl, Rfr, Rrl, Rrr;  
 	float Rm;
@@ -82,29 +82,25 @@ void kinematica(uint32_t mode, Motor_t* Motors, servo_t* Servo){
 	if (fabs(grl)<0.01) grl=0;
 	if (fabs(grr)<0.01) grr=0;
 	Motors[0].motorID=WFL;
-	Motors[0].command=CHANGE_SPEED;
-	Motors[0].prevSpeed=Motors[WFL].speed;
-	Motors[0].speed=(int16_t)(Vfl*60/r_wheel/2/pi);
+	Motors[0].prevRefImpact=Motors[0].refImpact;
+	Motors[0].refImpact=(int16_t)(Vfl*60/r_wheel/2/pi);
 
 	Motors[1].motorID=WFR;
-	Motors[1].command=CHANGE_SPEED;
-	Motors[1].prevSpeed=Motors[1].speed;
-	Motors[1].speed=(int16_t)(Vfr*60/r_wheel/2/pi);
+	Motors[1].prevRefImpact=Motors[1].refImpact;
+	Motors[1].refImpact=(int16_t)(Vfr*60/r_wheel/2/pi);
 	
 	Motors[2].motorID=WRL;
-	Motors[2].command=CHANGE_SPEED;
-	Motors[2].prevSpeed=Motors[2].speed;
-	Motors[2].speed=(int16_t)(Vrl*60/r_wheel/2/pi);
+	Motors[2].prevRefImpact=Motors[2].refImpact;
+	Motors[2].refImpact=(int16_t)(Vrl*60/r_wheel/2/pi);
 	
 	Motors[3].motorID=WRR;
-	Motors[3].command=CHANGE_SPEED;
-	Motors[3].prevSpeed=Motors[3].speed;
-	Motors[3].speed=(int16_t)(Vrr*60/r_wheel/2/pi);
+	Motors[3].prevRefImpact=Motors[3].refImpact;
+	Motors[3].refImpact=(int16_t)(Vrr*60/r_wheel/2/pi);
 
-	Servo[0].targetAngle=gfl;
-	Servo[1].targetAngle=gfr;
-	Servo[2].targetAngle=grl;
-	Servo[3].targetAngle=grr;
+	Servo->targetFrontLeft=gfl;
+	Servo->targetFrontRight=gfr;
+	Servo->targetRearLeft=grl;
+	Servo->targetRearRight=grr;
 }
 
 void normaliz(uint32_t vel_mean, uint32_t rx_mean, uint32_t dir_mean, uint32_t ry_mean){

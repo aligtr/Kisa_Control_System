@@ -103,6 +103,7 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 	FDCAN_RxHeaderTypeDef RxHeader;
 	uint8_t msgData[8];
 	int16_t newSpeed;
+	int16_t newTorque;
 	HAL_FDCAN_GetRxMessage(hfdcan,FDCAN_RX_FIFO0,&RxHeader,msgData);
 	switch (msgData[0])
   {
@@ -133,6 +134,10 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
     	PIDIdHandle_M1.hKiGain=msgData[3]+(msgData[4]<<8);
     	PIDIdHandle_M1.hKdGain=msgData[5]+(msgData[6]<<8);
 		break;
+    case 0x07:
+    	newTorque=msgData[1]+(msgData[2]<<8);
+    	MCI_ExecTorqueRamp(pMCI[0],newTorque/6,1);
+    	break;
 	}
 }
 

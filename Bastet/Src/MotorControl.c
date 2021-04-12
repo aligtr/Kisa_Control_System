@@ -46,23 +46,25 @@ HAL_StatusTypeDef motorRealeseCommand(Motor_t motor)
     switch (motor.command)
     {
     case MOTOR_START:
-        if(motor.status==MOTOR_START)
+        if(motor.status==RUN)
         {
             return HAL_OK;
         }
+        motor.status=RUN;
         break;
     case MOTOR_STOP:
-        if(motor.status==MOTOR_STOP)
+        if(motor.status==STOP)
         {
             return HAL_OK;
         }
+        motor.status=STOP;
         break;
     case CHANGE_SPEED:
-        if(motor.speed==motor.prevSpeed)
+        if(motor.refImpact==motor.prevRefImpact)
         {
             return HAL_OK;    
         }
-        arrayCopy(&motor.speed,&frame.data,2);
+        arrayCopy(&motor.refImpact,&frame.data,2);
         break;
     case SET_SPEED_PID:
         arrayCopy(&motor.speedPID,&frame.data,sizeof(uint16_t)*3);

@@ -24,12 +24,12 @@
 #include "main.h"
 #include "cmsis_os.h"
 
-#include "ServoControl.h"
-#include "MotorControl.h"
-#include "kinematica.h"
-#include "pdu.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "MotorControl.h"
+#include "SBusReceiver.h"
+#include "ServoControl.h"
+#include "pdu.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -115,7 +115,7 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the queue(s) */
   /* definition and creation of xQueuePDUDate */
-  osMessageQDef(xQueuePDUDate, 5, uint32_t);
+  osMessageQDef(xQueuePDUDate, 5, PduData_t);
   xQueuePDUDateHandle = osMessageCreate(osMessageQ(xQueuePDUDate), NULL);
 
   /* definition and creation of xQueueVelDate */
@@ -123,7 +123,7 @@ void MX_FREERTOS_Init(void) {
   xQueueVelDateHandle = osMessageCreate(osMessageQ(xQueueVelDate), NULL);
 
   /* definition and creation of xQueueAngleDate */
-  osMessageQDef(xQueueAngleDate, 4, servo_t);
+  osMessageQDef(xQueueAngleDate, 4, float);
   xQueueAngleDateHandle = osMessageCreate(osMessageQ(xQueueAngleDate), NULL);
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -132,23 +132,23 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 512);
+  osThreadDef(defaultTask, StartDefaultTask, 0, 0, 512);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of vKinematica */
-  osThreadDef(vKinematica, vKinematicaTask, osPriorityIdle, 0, 512);
+  osThreadDef(vKinematica, vKinematicaTask, 6, 0, 512);
   vKinematicaHandle = osThreadCreate(osThread(vKinematica), NULL);
 
   /* definition and creation of vPDUReader */
-  osThreadDef(vPDUReader, vPDUReaderTask, osPriorityIdle, 0, 512);
+  osThreadDef(vPDUReader, vPDUReaderTask, 4, 0, 512);
   vPDUReaderHandle = osThreadCreate(osThread(vPDUReader), NULL);
 
   /* definition and creation of vMotorControl */
-  osThreadDef(vMotorControl, vMotorControlTask, osPriorityIdle, 0, 512);
+  osThreadDef(vMotorControl, vMotorControlTask, 5, 0, 512);
   vMotorControlHandle = osThreadCreate(osThread(vMotorControl), NULL);
 
   /* definition and creation of vServoControl */
-  osThreadDef(vServoControl, vServoControlTask, osPriorityIdle, 0, 256);
+  osThreadDef(vServoControl, vServoControlTask, 5, 0, 512);
   vServoControlHandle = osThreadCreate(osThread(vServoControl), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -184,99 +184,82 @@ void StartDefaultTask(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_vKinematicaTask */
-void vKinematicaTask(void const * argument){
-	uint32_t vel_mean=0;
-	uint32_t rx_mean=0;
-	uint32_t dir_mean=0;
-	uint32_t ry_mean=0;
-	uint32_t mode=0;
-  Motor_t Motors[8]={0};
-  servo_t Servos[4]={0};
+void vKinematicaTask(void const * argument)
+{
+  /* USER CODE BEGIN vKinematicaTask */
+  /* Infinite loop */
+  Motor_t Motors[4];
+  Motors[0].command=CHANGE_SPEED;
+  Motors[1].command=CHANGE_SPEED;
+  Motors[2].command=CHANGE_SPEED;
+  Motors[3].command=CHANGE_SPEED;
+  servoTarget_t Servos;
+  PduData_t pduData;
   uint8_t i=0;
 	while(1){
-		if ((uxQueueMessagesWaiting(xQueuePDUDateHandle) != 5) || (uxQueueMessagesWaiting(xQueueVelDateHandle) == 8) || (uxQueueMessagesWaiting(xQueueAngleDateHandle) != 4)){
-         taskYIELD();
-     }
-		 else{
-				xQueueReceive(xQueuePDUDateHandle, &vel_mean, 0);
-				xQueueReceive(xQueuePDUDateHandle, &dir_mean, 0);
-				xQueueReceive(xQueuePDUDateHandle, &rx_mean, 0);
-				xQueueReceive(xQueuePDUDateHandle, &ry_mean, 0);
-				xQueueReceive(xQueuePDUDateHandle, &mode, 0);
-
-				normaliz(vel_mean, rx_mean, dir_mean, ry_mean);
-				kinematica(mode, &Motors, &Servos);
-        for (i=0; i<4; i++){
-          xQueueReceive(xQueueAngleDateHandle, &Servos[i], 0);
-			    PI_control(&Servos[i]);
-	        Motors[i+4].prevSpeed=Motors[i+4].speed;
-	        Motors[i+4].speed=Servos[i].speed;
-        }         
-
-        for (i=0; i<8; i++)
-			    xQueueSendToBack(xQueueVelDateHandle, &Motors[i], 0);
-				
-		 }
-		 vTaskDelay(100);
+		if (xQueueReceive(xQueuePDUDateHandle,&pduData,portMAX_DELAY)==pdTRUE)
+    {
+			normaliz(pduData.vel_mean, pduData.rx_mean, pduData.dir_mean, pduData.ry_mean);
+			kinematica(pduData.mode, &Motors, &Servos);
+      for (i=0; i<4; i++){
+        xQueueSendToBack(xQueueAngleDateHandle,&Servos,0);
+      } 
+      for (i=0; i<4; i++)
+      {
+        if(Motors[i].refImpact!=Motors[i].prevRefImpact)
+        {
+          xQueueSendToBack(xQueueVelDateHandle,&Motors[i],0);
+        }
+      } 
+    }
   }
+  /* USER CODE END vKinematicaTask */
 }
 
-/* USER CODE BEGIN Header_vODUReaderTask */
+/* USER CODE BEGIN Header_vPDUReaderTask */
 /**
 * @brief Function implementing the vPDUReader thread.
 * @param argument: Not used
 * @retval None
 */
-/* USER CODE END Header_vODUReaderTask */
-void vPDUReaderTask(void const * argument){
-	uint32_t mode=0;
-	uint32_t vel_mean=0;
-	uint32_t dir_mean=0;
-	uint32_t rx_mean=0;
-	uint32_t smt_src1=0;
-	uint32_t smt_src2=0;
-	uint32_t smt_src3=0;
-	uint32_t smt_src4=0;
-	uint32_t ry_mean=0;
+/* USER CODE END Header_vPDUReaderTask */
+void vPDUReaderTask(void const * argument)
+{
+  /* USER CODE BEGIN vPDUReaderTask */
+  /* Infinite loop */
+  PduData_t pduData;
 	uint16_t channels[18]={0};
-	while (1){
-		if( uxQueueMessagesWaiting( xQueuePDUDateHandle ) != 5 ){
-					receiveSBusDate(&channels);
-					vel_mean=channels[RIGHT_VERT];
-					dir_mean=channels[RIGHT_HORIZ];
-					rx_mean=channels[LEFT_VERT];
-					smt_src1=channels[ELEVDR];
-					smt_src2=channels[AILDR];
-					smt_src3=channels[GEAR];
-					smt_src4=channels[RUDDR];
-					ry_mean=channels[LEFT_HORIZ];
-				if(checkDate(vel_mean) && checkDate(dir_mean) && checkDate(rx_mean) && \
-					checkDate(smt_src1) && checkDate(smt_src2) && checkDate(smt_src3) && checkDate(ry_mean)) {
+	while (1)
+  {
+		receiveSBusDate(&channels);
+		pduData.vel_mean=channels[RIGHT_VERT];
+		pduData.dir_mean=channels[RIGHT_HORIZ];
+		pduData.rx_mean=channels[LEFT_VERT];
+		pduData.smt_src1=channels[ELEVDR];
+		pduData.smt_src2=channels[AILDR];
+		pduData.smt_src3=channels[GEAR];
+		pduData.smt_src4=channels[RUDDR];
+		pduData.ry_mean=channels[LEFT_HORIZ];
+		if(checkDate(pduData.vel_mean) && checkDate(pduData.dir_mean) && checkDate(pduData.rx_mean) && \
+					checkDate(pduData.smt_src1) && checkDate(pduData.smt_src2) && checkDate(pduData.smt_src3) && checkDate(pduData.ry_mean)) 
+    {
 					// if(smt_src2>700 || smt_src2<200)
 					// {
 					// 	reset();
 					// }				
 						
-					xQueueSendToBack(xQueuePDUDateHandle, &vel_mean, 0);
-					xQueueSendToBack(xQueuePDUDateHandle, &dir_mean, 0);
-					xQueueSendToBack(xQueuePDUDateHandle, &rx_mean, 0);
-					xQueueSendToBack(xQueuePDUDateHandle, &ry_mean, 0);
-					xQueueSendToBack(xQueuePDUDateHandle, &mode, 0);
-					
-          
-					// xTaskSuspend(vKinematicaHandle);
-					// xTaskSuspend(vServoControlHandle);//date ready
-				}
-				else{
-					// xTaskResume(vKinematicaHandle);
-					// xTaskResume(vServoControlHandle);//no pdu
-				}
-				vTaskDelay(100);
+		  xQueueSendToBack(xQueuePDUDateHandle, &pduData, 0);
+			// xTaskSuspend(vKinematicaHandle);
+			// xTaskSuspend(vServoControlHandle);//date ready
 		}
-		else 
-      taskYIELD();
-			
+		else
+    {
+			// xTaskResume(vKinematicaHandle);
+			// xTaskResume(vServoControlHandle);//no pdu
+		}
+		vTaskDelay(100);			
 	}
+  /* USER CODE END vPDUReaderTask */
 }
 
 /* USER CODE BEGIN Header_vMotorControlTask */
@@ -290,40 +273,12 @@ void vMotorControlTask(void const * argument)
 {
   /* USER CODE BEGIN vMotorControlTask */
   Motor_t motor;
-  int16_t i;
-  motor.command=MOTOR_START;
-  motorRealeseCommand(motor);
   for(;;)
   {
-    // motor.command=SET_TORQUE_PID;
-    // motor.torquePID[0]=12;
-    // motor.torquePID[1]=34;
-    // motor.torquePID[2]=56;
-    // motorRealeseCommand(motor);
-    // osDelay(1000);
-    // motor.torquePID[0]=0;
-    // motor.torquePID[1]=0;
-    // motor.torquePID[2]=0;
-    // motorRealeseCommand(motor);
-    // osDelay(1000);
-    for(i=20;i<300;i++)
+    if(xQueueReceive(xQueueVelDateHandle,&motor,portMAX_DELAY)==pdTRUE)
     {
-      motor.command=CHANGE_SPEED;
-      motor.speed=i;
       motorRealeseCommand(motor);
-      osDelay(50);
     }
-    for(i=300;i>20;i--)
-    {
-      motor.command=CHANGE_SPEED;
-      motor.speed=i;
-      motorRealeseCommand(motor);
-      osDelay(50);
-    }
-    /*osDelay(5000);
-    motor.command=MOTOR_STOP;
-    motorRealeseCommand(motor);
-    osDelay(5000);*/
   }
   /* USER CODE END vMotorControlTask */
 }
@@ -335,27 +290,48 @@ void vMotorControlTask(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_vServoControlTask */
-void vServoControlTask(void const * argument){
-	char i=0;
-  servo_t Servos[4]={0};
+void vServoControlTask(void const * argument)
+{
+  /* USER CODE BEGIN vServoControlTask */
+  /* Infinite loop */
+  uint8_t i=0;
+  servo_t Servos[4];
+  Motor_t motor;
+  servoTarget_t servotarget;
+  motor.command=CHANGE_TORQUE;
+  Servos[SERVO_FL].servoId=SFL;
+  Servos[SERVO_FR].servoId=SFR;
+  Servos[SERVO_RL].servoId=SRL;
+  Servos[SERVO_RR].servoId=SRR; 
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
-	while(1){
-		if ((uxQueueMessagesWaiting(xQueueAngleDateHandle) == 4)){
-         taskYIELD();
-     }
-		 else{
-				for (i=0; i<4; i++) {					
-					getCurrentAngle(i,&Servos[i], &hspi3);
-					xQueueSendToBack(xQueueAngleDateHandle, &Servos[i], 0);
-				}
-		 }
-		 vTaskDelay(100);
+	while(1)
+  {
+    if(xQueueReceive(xQueueAngleDateHandle,&servotarget,0)==pdTRUE)
+    {
+       Servos[SERVO_FL].targetAngle=servotarget.targetFrontLeft;
+       Servos[SERVO_FR].targetAngle=servotarget.targetFrontRight;
+       Servos[SERVO_RL].targetAngle=servotarget.targetRearLeft;
+       Servos[SERVO_RR].targetAngle=servotarget.targetRearRight;
+    }		
+    getCurrentAngle(i,&Servos[i], &hspi3);
+    for(i=0;i<4;i++)
+    {
+      motor.prevRefImpact=Servos[i].torque;
+      PI_control(&Servos[i]);
+      motor.refImpact=Servos[i].torque;
+      if(motor.refImpact!=motor.prevRefImpact)
+      {
+        motor.motorID=Servos[i].servoId;
+        xQueueSendToBack(xQueueVelDateHandle,&motor,0);
+      }
+    }
+    vTaskDelay(100);
 	}
+  /* USER CODE END vServoControlTask */
 }
-
 /* Private application code --------------------------------------------------*/
 /* USER CODE BEGIN Application */
      

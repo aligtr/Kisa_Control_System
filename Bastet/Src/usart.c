@@ -21,7 +21,7 @@
 #include "usart.h"
 
 /* USER CODE BEGIN 0 */
-
+#include "SBusReceiver.h"
 /* USER CODE END 0 */
 
 UART_HandleTypeDef huart2;
@@ -91,7 +91,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     hdma_usart2_rx.Init.MemInc = DMA_MINC_ENABLE;
     hdma_usart2_rx.Init.PeriphDataAlignment = DMA_PDATAALIGN_BYTE;
     hdma_usart2_rx.Init.MemDataAlignment = DMA_MDATAALIGN_BYTE;
-    hdma_usart2_rx.Init.Mode = DMA_CIRCULAR;
+    hdma_usart2_rx.Init.Mode = DMA_NORMAL;
     hdma_usart2_rx.Init.Priority = DMA_PRIORITY_HIGH;
     hdma_usart2_rx.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
     if (HAL_DMA_Init(&hdma_usart2_rx) != HAL_OK)
@@ -102,7 +102,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     __HAL_LINKDMA(uartHandle,hdmarx,hdma_usart2_rx);
 
   /* USER CODE BEGIN USART2_MspInit 1 */
-
+    //HAL_DMA_RegisterCallback(&hdma_usart2_rx,HAL_DMA_XFER_CPLT_CB_ID,uartRxDMATransferCallback);
   /* USER CODE END USART2_MspInit 1 */
   }
 }

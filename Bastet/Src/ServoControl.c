@@ -31,6 +31,6 @@ void getCurrentAngle(char i, servo_t* Servo, SPI_HandleTypeDef* hspi){
 }
 
 void PI_control(servo_t* Servo){	
-	Servo->speed = (int16_t)((Servo->targetAngle-Servo->currentAngle)*Servo->P+Servo->intergator*Servo->I);
+	Servo->torque = (int16_t)((Servo->targetAngle-Servo->currentAngle)*Servo->P+Servo->intergator*Servo->I);
 	Servo->intergator=Servo->intergator+Servo->I*(Servo->targetAngle-Servo->currentAngle);
 }

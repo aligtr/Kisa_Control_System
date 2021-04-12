@@ -3,6 +3,7 @@
 #define __MotorControl_H
 #include "main.h"
 
+
 typedef enum
 {
     STOP,
@@ -18,7 +19,8 @@ typedef enum
     CHANGE_SPEED=0x03,
     SET_SPEED_PID=0x04,
     SET_TORQUE_PID=0x05,
-    SET_FLUX_PID=0x06
+    SET_FLUX_PID=0x06,
+    CHANGE_TORQUE=0x07
 }FrameType_t;
 
 typedef enum
@@ -46,8 +48,8 @@ typedef struct
     motorID_t motorID;
     FrameType_t command;
     MotorStatus_t status;
-    int16_t speed;
-    int16_t prevSpeed;
+    int16_t refImpact;
+    int16_t prevRefImpact;
     uint16_t speedPID[3];
     uint16_t torquePID[3];
     uint16_t fluxPID[3]; 

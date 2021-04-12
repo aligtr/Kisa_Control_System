@@ -16,5 +16,6 @@
 
 
 void receiveSBusDate(uint16_t * channels);
+void uartRxDMATransferCallback(DMA_HandleTypeDef *dmaHandle);
 
 #endif

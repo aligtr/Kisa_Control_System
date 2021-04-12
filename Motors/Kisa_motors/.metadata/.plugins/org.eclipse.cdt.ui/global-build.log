@@ -2326,3 +2326,29 @@ arm-none-eabi-size "Kisa_motors.elf"
 19:58:39 **** Incremental Build of configuration Debug for project Kisa_motors ****
 make all 
 make: Nothing to be done for 'all'.
+16:35:59 **** Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+16:38:02 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+make: Nothing to be done for 'all'.
+16:41:23 **** Incremental Build of configuration Debug for project Kisa_motors ****
+make all 
+Building file: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+Invoking: MCU GCC Compiler
+C:\work\project\Kisa_Control_System\Motors\Kisa_motors\SW4STM32\Kisa_motors\Debug
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -DARM_MATH_CM4 -DUSE_HAL_DRIVER -DSTM32G431xx -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/STM32G4xx_HAL_Driver/Inc/Legacy" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/Any/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/MCLib/G4xx/Inc" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/MCSDK_v5.4.4/MotorControl/MCSDK/UILibrary/Inc" -I../../../MCSDK_v5.4.4/MotorControl/MCSDK/SystemDriveParams -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Device/ST/STM32G4xx/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/Include" -I"C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Drivers/CMSIS/DSP/Include"  -O3 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -fmessage-length=0 -MMD -MP -MF"Application/User/main.d" -MT"Application/User/main.o" -o "Application/User/main.o" "C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c"
+Finished building: C:/work/project/Kisa_Control_System/Motors/Kisa_motors/Src/main.c
+ 
+Building target: Kisa_motors.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -L"C:\work\project\Kisa_Control_System\Motors\Kisa_motors\MCSDK_v5.4.4\MotorControl\lib"  -specs=nosys.specs -specs=nano.specs -T"../STM32G431CBUx_FLASH.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "Kisa_motors.elf" @"objects.list"  -l:libmc-gcc_M4_NoCCMRAM.lib -lm
+Finished building target: Kisa_motors.elf
+ 
+make --no-print-directory post-build
+Generating hex and Printing size information:
+arm-none-eabi-objcopy -O ihex "Kisa_motors.elf" "Kisa_motors.hex"
+arm-none-eabi-size "Kisa_motors.elf"
+   text	   data	    bss	    dec	    hex	filename
+  40420	   1524	   3060	  45004	   afcc	Kisa_motors.elf
+ 
