@@ -1,8 +1,7 @@
 #include "ServoControl.h"
 uint32_t encoderDate=0;
 uint8_t buff[4]={0};
-void getCurrentAngle(char i, servo * Servo, SPI_HandleTypeDef * hspi){
-	uint16_t currentAngle=0;
+void getCurrentAngle(char i, servo_t* Servo, SPI_HandleTypeDef* hspi){
 	
 	switch (i){
 		case 0:
@@ -28,10 +27,10 @@ void getCurrentAngle(char i, servo * Servo, SPI_HandleTypeDef * hspi){
 	}
 	encoderDate = ((uint32_t)buff[0]<<4 | (uint32_t)buff[3]<<3  | ((uint32_t)buff[2])/32);
 
-	Servo->currentAngle = currentAngle;
+	Servo->currentAngle = encoderDate/4096*3.14;
 }
 
-void PI_control(servo * Servo){	
-	Servo->speed = (Servo->targetAngle-Servo->currentAngle)*Servo->P+Servo->intergator*Servo->I;
+void PI_control(servo_t* Servo){	
+	Servo->speed = (int16_t)((Servo->targetAngle-Servo->currentAngle)*Servo->P+Servo->intergator*Servo->I);
 	Servo->intergator=Servo->intergator+Servo->I*(Servo->targetAngle-Servo->currentAngle);
 }

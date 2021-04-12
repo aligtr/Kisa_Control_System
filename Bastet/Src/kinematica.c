@@ -1,6 +1,22 @@
 #include "kinematica.h"
-
-
+static float gam=0;
+static float R=9999;
+static float V=1;
+static float L=0.945;
+static float C=0.63;
+static uint16_t vel_period_max=320;
+static uint16_t vel_period_zero=596;
+static uint16_t dir_period_max=320;
+static uint16_t dir_period_zero=597;
+static uint16_t rx_period_zero=439;
+static uint16_t rx_period_max=320;
+static uint16_t ry_period_zero=596;
+static uint16_t ry_period_max=320;
+static float k_vel=5;
+static float k_dir=pi;
+static float k_gam=pi;
+static float r_wheel=0.2;
+static char constract;
 
 double sign(double a){
 	if (a>0) return 1;
@@ -8,10 +24,12 @@ double sign(double a){
 	else return 0;
 }
 
-void kinematica(uint32_t mode){
+void kinematica(uint32_t mode, Motor_t* Motors, servo_t* Servo){
 	float x,y;
 	float Rfl, Rfr, Rrl, Rrr;  
 	float Rm;
+	float gfl, gfr, grl, grr;
+	float Vfl, Vfr, Vrl, Vrr;
 	mode=2;
 	switch(mode)
 	{
@@ -63,6 +81,30 @@ void kinematica(uint32_t mode){
 	if (fabs(gfr)<0.01) gfr=0;
 	if (fabs(grl)<0.01) grl=0;
 	if (fabs(grr)<0.01) grr=0;
+	Motors[0].motorID=WFL;
+	Motors[0].command=CHANGE_SPEED;
+	Motors[0].prevSpeed=Motors[WFL].speed;
+	Motors[0].speed=(int16_t)(Vfl*60/r_wheel/2/pi);
+
+	Motors[1].motorID=WFR;
+	Motors[1].command=CHANGE_SPEED;
+	Motors[1].prevSpeed=Motors[1].speed;
+	Motors[1].speed=(int16_t)(Vfr*60/r_wheel/2/pi);
+	
+	Motors[2].motorID=WRL;
+	Motors[2].command=CHANGE_SPEED;
+	Motors[2].prevSpeed=Motors[2].speed;
+	Motors[2].speed=(int16_t)(Vrl*60/r_wheel/2/pi);
+	
+	Motors[3].motorID=WRR;
+	Motors[3].command=CHANGE_SPEED;
+	Motors[3].prevSpeed=Motors[3].speed;
+	Motors[3].speed=(int16_t)(Vrr*60/r_wheel/2/pi);
+
+	Servo[0].targetAngle=gfl;
+	Servo[1].targetAngle=gfr;
+	Servo[2].targetAngle=grl;
+	Servo[3].targetAngle=grr;
 }
 
 void normaliz(uint32_t vel_mean, uint32_t rx_mean, uint32_t dir_mean, uint32_t ry_mean){

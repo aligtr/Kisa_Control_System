@@ -21,16 +21,29 @@ typedef enum
     SET_FLUX_PID=0x06
 }FrameType_t;
 
+typedef enum
+{
+    //NONE=0x00,
+    WFL=0x01,
+    WFR=0x02,
+    WRL=0x03,
+    WRR=0x04,
+    SFL=0x05,
+    SFR=0x06,
+    SRL=0x07,
+    SRR=0x08
+}motorID_t;
+
 typedef struct 
 {
-    uint32_t id;
+    motorID_t id;
     FrameType_t frameType;
     uint8_t data[7];
 }MCFrame_t;
 
 typedef struct
 {
-    uint32_t motorID;
+    motorID_t motorID;
     FrameType_t command;
     MotorStatus_t status;
     int16_t speed;

@@ -24,9 +24,12 @@
 #include "main.h"
 #include "cmsis_os.h"
 
+#include "ServoControl.h"
+#include "MotorControl.h"
+#include "kinematica.h"
+#include "pdu.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "MotorControl.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -120,7 +123,7 @@ void MX_FREERTOS_Init(void) {
   xQueueVelDateHandle = osMessageCreate(osMessageQ(xQueueVelDate), NULL);
 
   /* definition and creation of xQueueAngleDate */
-  osMessageQDef(xQueueAngleDate, 4, float);
+  osMessageQDef(xQueueAngleDate, 4, servo_t);
   xQueueAngleDateHandle = osMessageCreate(osMessageQ(xQueueAngleDate), NULL);
 
   /* USER CODE BEGIN RTOS_QUEUES */
@@ -187,8 +190,11 @@ void vKinematicaTask(void const * argument){
 	uint32_t dir_mean=0;
 	uint32_t ry_mean=0;
 	uint32_t mode=0;
+  Motor_t Motors[8]={0};
+  servo_t Servos[4]={0};
+  uint8_t i=0;
 	while(1){
-		if ((uxQueueMessagesWaiting(xQueuePDUDateHandle) != 5) || (uxQueueMessagesWaiting(xQueueVelDateHandle) == 4) || (uxQueueMessagesWaiting(xQueueAngleDateHandle) == 4)){
+		if ((uxQueueMessagesWaiting(xQueuePDUDateHandle) != 5) || (uxQueueMessagesWaiting(xQueueVelDateHandle) == 8) || (uxQueueMessagesWaiting(xQueueAngleDateHandle) != 4)){
          taskYIELD();
      }
 		 else{
@@ -197,23 +203,21 @@ void vKinematicaTask(void const * argument){
 				xQueueReceive(xQueuePDUDateHandle, &rx_mean, 0);
 				xQueueReceive(xQueuePDUDateHandle, &ry_mean, 0);
 				xQueueReceive(xQueuePDUDateHandle, &mode, 0);
-			 
+
 				normaliz(vel_mean, rx_mean, dir_mean, ry_mean);
-				kinematica(mode);
-			 
-				xQueueSendToBack(xQueueVelDateHandle, &Vfl, 0);
-				xQueueSendToBack(xQueueVelDateHandle, &Vfr, 0);
-				xQueueSendToBack(xQueueVelDateHandle, &Vrl, 0);
-				xQueueSendToBack(xQueueVelDateHandle, &Vrr, 0);
-			 
-				xQueueSendToBack(xQueueAngleDateHandle, &gfl, 0);
-				xQueueSendToBack(xQueueAngleDateHandle, &gfr, 0);
-				xQueueSendToBack(xQueueAngleDateHandle, &grl, 0);
-				xQueueSendToBack(xQueueAngleDateHandle, &grr, 0);
+				kinematica(mode, &Motors, &Servos);
+        for (i=0; i<4; i++){
+          xQueueReceive(xQueueAngleDateHandle, &Servos[i], 0);
+			    PI_control(&Servos[i]);
+	        Motors[i+4].prevSpeed=Motors[i+4].speed;
+	        Motors[i+4].speed=Servos[i].speed;
+        }         
+
+        for (i=0; i<8; i++)
+			    xQueueSendToBack(xQueueVelDateHandle, &Motors[i], 0);
 				
 		 }
 		 vTaskDelay(100);
-	
   }
 }
 
@@ -331,22 +335,21 @@ void vMotorControlTask(void const * argument)
 * @retval None
 */
 /* USER CODE END Header_vServoControlTask */
-static servo Servos[4]={0};
 void vServoControlTask(void const * argument){
 	char i=0;
+  servo_t Servos[4]={0};
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
 	while(1){
-		if ((uxQueueMessagesWaiting(xQueuePDUDateHandle) != 4)){
+		if ((uxQueueMessagesWaiting(xQueueAngleDateHandle) == 4)){
          taskYIELD();
      }
 		 else{
 				for (i=0; i<4; i++) {					
 					getCurrentAngle(i,&Servos[i], &hspi3);
-					xQueueReceive(xQueuePDUDateHandle, &Servos[i], 0);
-					PI_control(&Servos[i]);
+					xQueueSendToBack(xQueueAngleDateHandle, &Servos[i], 0);
 				}
 		 }
 		 vTaskDelay(100);

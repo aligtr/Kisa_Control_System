@@ -3,10 +3,10 @@
 
 extern CAN_HandleTypeDef hcan3;
 
-void arrayCopy(uint8_t* src, uint8_t* dst,uint16_t size)
+void arrayCopy(uint8_t* src, uint8_t* dst, uint16_t size)
 {
     uint16_t i;
-    for(i=0;i<size;i++)
+    for(i=0; i<size; i++)
     {
         dst[i]=src[i];
     }

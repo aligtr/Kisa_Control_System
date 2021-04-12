@@ -1,6 +1,6 @@
 #include "SBusReceiver.h"
 
-void receiveSBusDate(uint16_t * channels){
+void receiveSBusDate(uint16_t* channels){
 		uint8_t buffer[50]={0};
 		uint8_t i=0;
 		HAL_UART_Receive_DMA(&huart2, (uint8_t*)buffer,50);

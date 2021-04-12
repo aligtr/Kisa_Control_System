@@ -32,10 +32,6 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "kinematica.h"
-#include "pdu.h"
-#include "SBusReceiver.h"
-#include "ServoControl.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

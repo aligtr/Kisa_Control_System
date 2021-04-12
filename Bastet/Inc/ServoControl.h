@@ -4,14 +4,14 @@
 
 typedef struct
 {
-	uint16_t currentAngle;
-	uint16_t targetAngle;
-	uint16_t P;
-	uint16_t I;
-	uint16_t speed;	
-	uint16_t intergator;
-}servo;
+	float currentAngle;
+	float targetAngle;
+	int16_t P;
+	int16_t I;
+	int16_t speed;	
+	int16_t intergator;
+}servo_t;
 
-void PI_control(servo * Servo);
-void getCurrentAngle(char i, servo * Servo, SPI_HandleTypeDef * hspi);
+void PI_control(servo_t* Servo);
+void getCurrentAngle(char i, servo_t* Servo, SPI_HandleTypeDef* hspi);
 #endif
