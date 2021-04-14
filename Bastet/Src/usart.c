@@ -94,7 +94,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     __HAL_LINKDMA(uartHandle,hdmarx,hdma_usart3_rx);
 
   /* USER CODE BEGIN USART3_MspInit 1 */
-  
+    //HAL_DMA_RegisterCallback(&hdma_usart3_rx,HAL_DMA_XFER_ALL_CB_ID,(void*)uartRxDMATransferCallback);
   /* USER CODE END USART3_MspInit 1 */
   }
 }

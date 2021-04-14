@@ -50,14 +50,12 @@ HAL_StatusTypeDef motorRealeseCommand(Motor_t motor)
         {
             return HAL_OK;
         }
-        motor.status=RUN;
         break;
     case MOTOR_STOP:
         if(motor.status==STOP)
         {
             return HAL_OK;
         }
-        motor.status=STOP;
         break;
     case CHANGE_SPEED:
         if(motor.refImpact==motor.prevRefImpact)

@@ -98,6 +98,8 @@ static void MX_NVIC_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+#define CAN_ID 0x200
+
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 {
 	FDCAN_RxHeaderTypeDef RxHeader;
@@ -105,39 +107,44 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 	int16_t newSpeed;
 	int16_t newTorque;
 	HAL_FDCAN_GetRxMessage(hfdcan,FDCAN_RX_FIFO0,&RxHeader,msgData);
-	switch (msgData[0])
-  {
-    case 0x01:
-    	MCI_StartMotor(pMCI[0]);
-    	status=1;
-		break;
-    case 0x02:
-    	MCI_StopMotor(pMCI[0]);
-    	status=0;
-		break;
-    case 0x03:
-    	newSpeed=msgData[1]+(msgData[2]<<8);
-    	MCI_ExecSpeedRamp(pMCI[0],newSpeed/6,1);
-		break;
-    case 0x04:
-    	PIDSpeedHandle_M1.hKpGain=msgData[1]+(msgData[2]<<8);
-    	PIDSpeedHandle_M1.hKiGain=msgData[3]+(msgData[4]<<8);
-    	PIDSpeedHandle_M1.hKdGain=msgData[5]+(msgData[6]<<8);
-		break;
-    case 0x05:
-    	PIDIqHandle_M1.hKpGain=msgData[1]+(msgData[2]<<8);
-    	PIDIqHandle_M1.hKiGain=msgData[3]+(msgData[4]<<8);
-    	PIDIqHandle_M1.hKdGain=msgData[5]+(msgData[6]<<8);
-		break;
-    case 0x06:
-    	PIDIdHandle_M1.hKpGain=msgData[1]+(msgData[2]<<8);
-    	PIDIdHandle_M1.hKiGain=msgData[3]+(msgData[4]<<8);
-    	PIDIdHandle_M1.hKdGain=msgData[5]+(msgData[6]<<8);
-		break;
-    case 0x07:
-    	newTorque=msgData[1]+(msgData[2]<<8);
-    	MCI_ExecTorqueRamp(pMCI[0],newTorque/6,1);
-    	break;
+	if(RxHeader.Identifier==0x200)
+	{
+		switch (msgData[0])
+		{
+		case 0x01:
+			MCI_ExecSpeedRamp(pMCI[0],0,1);
+			MCI_StartMotor(pMCI[0]);
+			status=1;
+			break;
+		case 0x02:
+			MCI_StopMotor(pMCI[0]);
+			MCI_ExecSpeedRamp(pMCI[0],0,1);
+			status=0;
+			break;
+		case 0x03:
+			newSpeed=msgData[1]+(msgData[2]<<8);
+			MCI_ExecSpeedRamp(pMCI[0],newSpeed/6,1);
+			break;
+		case 0x04:
+			PIDSpeedHandle_M1.hKpGain=msgData[1]+(msgData[2]<<8);
+			PIDSpeedHandle_M1.hKiGain=msgData[3]+(msgData[4]<<8);
+			PIDSpeedHandle_M1.hKdGain=msgData[5]+(msgData[6]<<8);
+			break;
+		case 0x05:
+			PIDIqHandle_M1.hKpGain=msgData[1]+(msgData[2]<<8);
+			PIDIqHandle_M1.hKiGain=msgData[3]+(msgData[4]<<8);
+			PIDIqHandle_M1.hKdGain=msgData[5]+(msgData[6]<<8);
+			break;
+		case 0x06:
+			PIDIdHandle_M1.hKpGain=msgData[1]+(msgData[2]<<8);
+			PIDIdHandle_M1.hKiGain=msgData[3]+(msgData[4]<<8);
+			PIDIdHandle_M1.hKdGain=msgData[5]+(msgData[6]<<8);
+			break;
+		case 0x07:
+			newTorque=msgData[1]+(msgData[2]<<8);
+			MCI_ExecTorqueRamp(pMCI[0],newTorque/6,1);
+			break;
+		}
 	}
 }
 
@@ -193,9 +200,9 @@ int main(void)
   FDCAN_FilterTypeDef fdcanFilter;
   fdcanFilter.FilterConfig=FDCAN_FILTER_TO_RXFIFO0;
   fdcanFilter.FilterID1=0;
-  fdcanFilter.FilterID2=0;
+  fdcanFilter.FilterID2=0xFFFF;
   fdcanFilter.FilterIndex=0x321;
-  fdcanFilter.FilterType=FDCAN_FILTER_MASK;
+  fdcanFilter.FilterType=FDCAN_FILTER_DUAL;
   fdcanFilter.IdType=FDCAN_STANDARD_ID;
   HAL_FDCAN_ConfigFilter(&hfdcan1,&fdcanFilter);
   HAL_FDCAN_Start(&hfdcan1);

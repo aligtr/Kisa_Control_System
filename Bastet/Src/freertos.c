@@ -30,6 +30,7 @@
 #include "SBusReceiver.h"
 #include "ServoControl.h"
 #include "pdu.h"
+#include "semphr.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -60,6 +61,7 @@ osThreadId vServoControlHandle;
 osMessageQId xQueuePDUDateHandle;
 osMessageQId xQueueVelDateHandle;
 osMessageQId xQueueAngleDateHandle;
+osSemaphoreId dmaReciveSemaphoreHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -105,8 +107,14 @@ void MX_FREERTOS_Init(void) {
   /* add mutexes, ... */
   /* USER CODE END RTOS_MUTEX */
 
+  /* Create the semaphores(s) */
+  /* definition and creation of dmaReciveSemaphore */
+  osSemaphoreDef(dmaReciveSemaphore);
+  dmaReciveSemaphoreHandle = osSemaphoreCreate(osSemaphore(dmaReciveSemaphore), 1);
+  
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
+  xSemaphoreTake(dmaReciveSemaphoreHandle,0);
   /* USER CODE END RTOS_SEMAPHORES */
 
   /* USER CODE BEGIN RTOS_TIMERS */
@@ -119,7 +127,7 @@ void MX_FREERTOS_Init(void) {
   xQueuePDUDateHandle = osMessageCreate(osMessageQ(xQueuePDUDate), NULL);
 
   /* definition and creation of xQueueVelDate */
-  osMessageQDef(xQueueVelDate, 20, Motor_t);
+  osMessageQDef(xQueueVelDate, 50, Motor_t);
   xQueueVelDateHandle = osMessageCreate(osMessageQ(xQueueVelDate), NULL);
 
   /* definition and creation of xQueueAngleDate */
@@ -148,7 +156,7 @@ void MX_FREERTOS_Init(void) {
   vMotorControlHandle = osThreadCreate(osThread(vMotorControl), NULL);
 
   /* definition and creation of vServoControl */
-  osThreadDef(vServoControl, vServoControlTask, 3, 0, 256);
+  osThreadDef(vServoControl, vServoControlTask, 5, 0, 256);
   vServoControlHandle = osThreadCreate(osThread(vServoControl), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -167,7 +175,7 @@ void MX_FREERTOS_Init(void) {
 void StartDefaultTask(void const * argument)
 {
   /* init code for LWIP */
-  MX_LWIP_Init();
+  //MX_LWIP_Init();
   /* USER CODE BEGIN StartDefaultTask */
   /* Infinite loop */
   for(;;)
@@ -189,28 +197,70 @@ void vKinematicaTask(void const * argument)
   /* USER CODE BEGIN vKinematicaTask */
   /* Infinite loop */
   Motor_t Motors[4];
-  Motors[0].command=CHANGE_SPEED;
-  Motors[1].command=CHANGE_SPEED;
-  Motors[2].command=CHANGE_SPEED;
-  Motors[3].command=CHANGE_SPEED;
+  //Motors[0].motorID=WFL;
+  Motors[0].motorID=WFL;
+  Motors[1].motorID=WFR;
+  Motors[2].motorID=WRL;
+  Motors[3].motorID=WRR;
+  Motors[0].status=STOP;
+  Motors[1].status=STOP;
+  Motors[2].status=STOP;
+  Motors[3].status=STOP;
+  Motors[0].prevRefImpact=0;
+  Motors[1].prevRefImpact=0;
+  Motors[2].prevRefImpact=0;
+  Motors[3].prevRefImpact=0;
   servoTarget_t Servos;
   PduData_t pduData;
   uint8_t i=0;
 	while(1){
 		if (xQueueReceive(xQueuePDUDateHandle,&pduData,portMAX_DELAY)==pdTRUE)
     {
-			normaliz(pduData.vel_mean, pduData.rx_mean, pduData.dir_mean, pduData.ry_mean);
-			kinematica(pduData.mode, &Motors, &Servos);
-      for (i=0; i<4; i++){
-        xQueueSendToBack(xQueueAngleDateHandle,&Servos,0);
-      } 
-      for (i=0; i<4; i++)
+      if(pduData.gear==1 && (Motors[0].status==STOP || Motors[1].status==STOP || Motors[2].status==STOP || Motors[3].status==STOP))
       {
-        if(Motors[i].refImpact!=Motors[i].prevRefImpact)
+        Motors[0].command=MOTOR_START;
+        Motors[1].command=MOTOR_START;
+        Motors[2].command=MOTOR_START;
+        Motors[3].command=MOTOR_START;
+        for (i=0; i<4; i++)
         {
           xQueueSendToBack(xQueueVelDateHandle,&Motors[i],0);
         }
-      } 
+        Motors[0].status=RUN;
+        Motors[1].status=RUN;
+        Motors[2].status=RUN;
+        Motors[3].status=RUN;
+      }
+      if(pduData.gear==0 && (Motors[0].status==RUN || Motors[1].status==RUN || Motors[2].status==RUN || Motors[3].status==RUN))
+      {
+        Motors[0].command=MOTOR_STOP;
+        Motors[1].command=MOTOR_STOP;
+        Motors[2].command=MOTOR_STOP;
+        Motors[3].command=MOTOR_STOP;
+        for (i=0; i<4; i++)
+        {
+          xQueueSendToBack(xQueueVelDateHandle,&Motors[i],0);
+        }
+        Motors[0].status=STOP;
+        Motors[1].status=STOP;
+        Motors[2].status=STOP;
+        Motors[3].status=STOP;
+      }
+      if(pduData.gear==1)
+      {
+        normaliz(pduData.vel_mean, pduData.rx_mean,pduData.dir_mean, pduData.ry_mean);
+        kinematica(pduData.mode, &Motors, &Servos);
+        for (i=0; i<4; i++){
+          xQueueSendToBack(xQueueAngleDateHandle,&Servos,0);
+        } 
+        for (i=0; i<4; i++)
+        {
+          if(Motors[i].refImpact!=Motors[i].prevRefImpact)
+          {
+            xQueueSendToBack(xQueueVelDateHandle,&Motors[i],0);
+          }
+        } 
+      }
     }
   }
   /* USER CODE END vKinematicaTask */
@@ -235,19 +285,19 @@ void vPDUReaderTask(void const * argument)
 		pduData.vel_mean=channels[RIGHT_VERT];
 		pduData.dir_mean=channels[RIGHT_HORIZ];
 		pduData.rx_mean=channels[LEFT_VERT];
-		pduData.smt_src1=channels[ELEVDR];
-		pduData.smt_src2=channels[AILDR];
-		pduData.smt_src3=channels[GEAR];
-		pduData.smt_src4=channels[RUDDR];
-		pduData.ry_mean=channels[LEFT_HORIZ];
+    pduData.ry_mean=channels[LEFT_HORIZ];
+		pduData.elevdr=channels[ELEVDR];
+		pduData.aildr=channels[AILDR];
+		pduData.gear=channels[GEAR];
+		pduData.rudr=channels[RUDDR];
 		if(checkDate(pduData.vel_mean) && checkDate(pduData.dir_mean) && checkDate(pduData.rx_mean) && \
-					checkDate(pduData.smt_src1) && checkDate(pduData.smt_src2) && checkDate(pduData.smt_src3) && checkDate(pduData.ry_mean)) 
+					checkDate(pduData.elevdr) && checkDate(pduData.aildr) && checkDate(pduData.gear) && checkDate(pduData.ry_mean)) 
     {
-					// if(smt_src2>700 || smt_src2<200)
-					// {
-					// 	reset();
-					// }				
 						
+			pduData.elevdr=checkLevel(pduData.elevdr);
+      pduData.aildr=checkLevel(pduData.aildr);
+      pduData.gear=checkLevel(pduData.gear);
+      pduData.rudr=checkLevel(pduData.rudr);
 		  xQueueSendToBack(xQueuePDUDateHandle, &pduData, 0);
 			// xTaskSuspend(vKinematicaHandle);
 			// xTaskSuspend(vServoControlHandle);//date ready
@@ -303,6 +353,16 @@ void vServoControlTask(void const * argument)
   Servos[SERVO_FR].servoId=SFR;
   Servos[SERVO_RL].servoId=SRL;
   Servos[SERVO_RR].servoId=SRR; 
+
+  Servos[SERVO_FL].P=100;
+  Servos[SERVO_FR].P=100;
+  Servos[SERVO_RL].P=100;
+  Servos[SERVO_RR].P=100;
+
+  Servos[SERVO_FL].I=10;
+  Servos[SERVO_FR].I=10;
+  Servos[SERVO_RL].I=10;
+  Servos[SERVO_RR].I=10; 
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
@@ -316,9 +376,9 @@ void vServoControlTask(void const * argument)
        Servos[SERVO_RL].targetAngle=servotarget.targetRearLeft;
        Servos[SERVO_RR].targetAngle=servotarget.targetRearRight;
     }		
-    getCurrentAngle(i,&Servos[i], &hspi3);
     for(i=0;i<4;i++)
     {
+      getCurrentAngle(i,&Servos[i], &hspi3);
       motor.prevRefImpact=Servos[i].torque;
       PI_control(&Servos[i]);
       motor.refImpact=Servos[i].torque;

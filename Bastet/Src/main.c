@@ -68,7 +68,6 @@ void MX_FREERTOS_Init(void);
   * @brief  The application entry point.
   * @retval int
   */
- uint16_t channels[18];
 int main(void)
 {
   /* USER CODE BEGIN 1 */
@@ -125,7 +124,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    //receiveSBusDate(channels);
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

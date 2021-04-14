@@ -26,14 +26,14 @@ typedef enum
 typedef enum
 {
     //NONE=0x00,
-    WFL=0x01,
-    WFR=0x02,
-    WRL=0x03,
-    WRR=0x04,
-    SFL=0x05,
-    SFR=0x06,
-    SRL=0x07,
-    SRR=0x08
+    WFL=0x200,
+    WFR=0x210,
+    WRL=0x220,
+    WRR=0x230,
+    SFL=0x240,
+    SFR=0x250,
+    SRL=0x260,
+    SRR=0x270
 }motorID_t;
 
 typedef struct 
