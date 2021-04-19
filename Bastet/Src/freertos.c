@@ -31,6 +31,9 @@
 #include "ServoControl.h"
 #include "pdu.h"
 #include "semphr.h"
+#include "lwip/opt.h"
+#include "lwip/arch.h"
+#include "lwip/api.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +56,7 @@
 extern CAN_HandleTypeDef hcan3;
 extern SPI_HandleTypeDef hspi3;
 /* USER CODE END Variables */
-osThreadId defaultTaskHandle;
+osThreadId tcpTaskHandle;
 osThreadId vKinematicaHandle;
 osThreadId vPDUReaderHandle;
 osThreadId vMotorControlHandle;
@@ -68,7 +71,7 @@ osSemaphoreId dmaReciveSemaphoreHandle;
    
 /* USER CODE END FunctionPrototypes */
 
-void StartDefaultTask(void const * argument);
+void vTcpTask(void const * argument);
 void vKinematicaTask(void const * argument);
 void vPDUReaderTask(void const * argument);
 void vMotorControlTask(void const * argument);
@@ -111,7 +114,7 @@ void MX_FREERTOS_Init(void) {
   /* definition and creation of dmaReciveSemaphore */
   osSemaphoreDef(dmaReciveSemaphore);
   dmaReciveSemaphoreHandle = osSemaphoreCreate(osSemaphore(dmaReciveSemaphore), 1);
-  
+
   /* USER CODE BEGIN RTOS_SEMAPHORES */
   /* add semaphores, ... */
   xSemaphoreTake(dmaReciveSemaphoreHandle,0);
@@ -127,7 +130,7 @@ void MX_FREERTOS_Init(void) {
   xQueuePDUDateHandle = osMessageCreate(osMessageQ(xQueuePDUDate), NULL);
 
   /* definition and creation of xQueueVelDate */
-  osMessageQDef(xQueueVelDate, 50, Motor_t);
+  osMessageQDef(xQueueVelDate, 20, Motor_t);
   xQueueVelDateHandle = osMessageCreate(osMessageQ(xQueueVelDate), NULL);
 
   /* definition and creation of xQueueAngleDate */
@@ -139,24 +142,24 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, 0, 0, 512);
-  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+  /* definition and creation of tcpTask */
+  osThreadDef(tcpTask, vTcpTask, 6, 0, 3000);
+  tcpTaskHandle = osThreadCreate(osThread(tcpTask), NULL);
 
   /* definition and creation of vKinematica */
-  osThreadDef(vKinematica, vKinematicaTask, 6, 0, 512);
+  osThreadDef(vKinematica, vKinematicaTask, osPriorityHigh, 0, 512);
   vKinematicaHandle = osThreadCreate(osThread(vKinematica), NULL);
 
   /* definition and creation of vPDUReader */
-  osThreadDef(vPDUReader, vPDUReaderTask, 4, 0, 512);
+  osThreadDef(vPDUReader, vPDUReaderTask, osPriorityNormal, 0, 512);
   vPDUReaderHandle = osThreadCreate(osThread(vPDUReader), NULL);
 
   /* definition and creation of vMotorControl */
-  osThreadDef(vMotorControl, vMotorControlTask, 5, 0, 512);
+  osThreadDef(vMotorControl, vMotorControlTask, osPriorityAboveNormal, 0, 512);
   vMotorControlHandle = osThreadCreate(osThread(vMotorControl), NULL);
 
   /* definition and creation of vServoControl */
-  osThreadDef(vServoControl, vServoControlTask, 5, 0, 256);
+  osThreadDef(vServoControl, vServoControlTask, osPriorityAboveNormal, 0, 512);
   vServoControlHandle = osThreadCreate(osThread(vServoControl), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -165,24 +168,67 @@ void MX_FREERTOS_Init(void) {
 
 }
 
-/* USER CODE BEGIN Header_StartDefaultTask */
+/* USER CODE BEGIN Header_vTcpTask */
 /**
-  * @brief  Function implementing the defaultTask thread.
-  * @param  argument: Not used 
+  * @brief  Function implementing the tcpTask thread.
+  * @param  argument: Not used
   * @retval None
   */
-/* USER CODE END Header_StartDefaultTask */
-void StartDefaultTask(void const * argument)
+/* USER CODE END Header_vTcpTask */
+void vTcpTask(void const * argument)
 {
   /* init code for LWIP */
-  //MX_LWIP_Init();
-  /* USER CODE BEGIN StartDefaultTask */
-  /* Infinite loop */
+  MX_LWIP_Init();
+  /* USER CODE BEGIN vTcpTask */
+  struct netconn *conn, *newconn;
+  err_t err, accept_err;
+  struct netbuf* buf;
+  uint8_t* data;
+  uint16_t len;
+  err_t recv_err;
+  /* Infinite loop */ 
   for(;;)
   {
-    osDelay(1);
+    /* Create a new connection identifier. */
+    conn = netconn_new(NETCONN_TCP);
+    if (conn != NULL)
+    {
+        /* Bind connection to well known port number 80. */
+        err = netconn_bind(conn, NULL, 80);
+        if (err == ERR_OK)
+        {
+            /* Tell connection to go into listening mode. */
+            netconn_listen(conn);
+            while (1)
+            {
+                /* Grab new connection. */
+                accept_err = netconn_accept(conn, &newconn);
+
+                /* Process the new connection. */
+                if (accept_err == ERR_OK)
+                {
+                    while ((recv_err = netconn_recv(newconn, &buf)) == ERR_OK)
+                    {
+                        do
+                        {
+                            netbuf_data(buf, &data, &len);
+                            netconn_write(newconn, data, len, NETCONN_COPY);
+                        } while (netbuf_next(buf) >= 0);
+                        netbuf_delete(buf);
+                    }
+                    /* Close connection and discard connection identifier. */
+                    netconn_close(newconn);
+                    netconn_delete(newconn);
+                }
+            }
+        }
+        else
+        {
+            netconn_delete(newconn);
+        }
+    }
   }
-  /* USER CODE END StartDefaultTask */
+  /* USER CODE END vTcpTask */
 }
 
 /* USER CODE BEGIN Header_vKinematicaTask */
