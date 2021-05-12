@@ -38,7 +38,11 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-
+typedef struct 
+{
+  uint16_t cmd_vel;
+  uint16_t cmd_ang;
+}TcpCmd_t;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -186,7 +190,9 @@ void vTcpTask(void const * argument)
   uint8_t* data;
   uint16_t len;
   err_t recv_err;
-  /* Infinite loop */ 
+  TcpCmd_t cmd;
+  uint8_t cmd_data[5];
+  int8_t i, i_pow;
   for(;;)
   {
     /* Create a new connection identifier. */
@@ -215,6 +221,25 @@ void vTcpTask(void const * argument)
                             netconn_write(newconn, data, len, NETCONN_COPY);
                         } while (netbuf_next(buf) >= 0);
                         netbuf_delete(buf);
+                        if (len>=5)
+                        {
+                            i=len-2;
+                            i_pow=0;
+                            while(data[i]!=';' || data[i]!='-'){
+                                cmd.cmd_ang += data[i]*i_pow;
+                                i--;
+                                i_pow++;
+                            }  
+                            if (data[i]=='-') cmd.cmd_ang=-cmd.cmd_ang;                      
+                            i=len--;
+                            i_pow=0;
+                            while(data[i]!='[' || data[i]!='-'){
+                                cmd.cmd_vel += data[i]*i_pow;
+                                i--;
+                                i_pow++;
+                            }
+                            if (data[i]=='-') cmd.cmd_vel=-cmd.cmd_vel;  
+                        }
                     }
                     /* Close connection and discard connection identifier. */
                     netconn_close(newconn);
@@ -337,14 +362,19 @@ void vPDUReaderTask(void const * argument)
 		pduData.gear=channels[GEAR];
 		pduData.rudr=channels[RUDDR];
 		if(checkDate(pduData.vel_mean) && checkDate(pduData.dir_mean) && checkDate(pduData.rx_mean) && \
-					checkDate(pduData.elevdr) && checkDate(pduData.aildr) && checkDate(pduData.gear) && checkDate(pduData.ry_mean)) 
+				checkDate(pduData.elevdr) && checkDate(pduData.aildr) && checkDate(pduData.gear) && checkDate(pduData.ry_mean)) 
     {
 						
 			pduData.elevdr=checkLevel(pduData.elevdr);
       pduData.aildr=checkLevel(pduData.aildr);
       pduData.gear=checkLevel(pduData.gear);
       pduData.rudr=checkLevel(pduData.rudr);
-		  xQueueSendToBack(xQueuePDUDateHandle, &pduData, 0);
+      if(pduData.elevdr==0)
+		    xQueueSendToBack(xQueuePDUDateHandle, &pduData, 0);
+      else
+      {
+        
+      }
 			// xTaskSuspend(vKinematicaHandle);
 			// xTaskSuspend(vServoControlHandle);//date ready
 		}
