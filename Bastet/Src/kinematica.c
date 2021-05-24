@@ -24,14 +24,21 @@ double sign(double a){
 	else return 0;
 }
 
-void normaliz(uint16_t vel_mean, uint16_t rx_mean, uint16_t dir_mean, uint16_t ry_mean){
+void normaliz(uint16_t vel_mean, uint16_t rx_mean, uint16_t dir_mean, uint16_t ry_mean, uint16_t elevdr){
 	float d_vel=0;
 	float d_ry=0;
 	float Rg0=0;
 	float d_rx=0;
 	float d_dir=0;
 	float vel_coef=0;
-
+	if (elevdr==1){
+		gam=0;
+		V=vel_mean/100;
+		R=L/2/tan(dir_mean/100);
+		if (fabs(R)<0.1) R=0.00001*sign(R);
+		if (fabs(R)>50) R=10000;
+		return;
+	}
 	d_dir=(dir_mean-dir_period_zero);
 	d_vel=(vel_mean-vel_period_zero);
 	d_rx=(rx_mean-rx_period_zero);

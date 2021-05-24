@@ -21,8 +21,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f7xx_it.h"
-#include "FreeRTOS.h"
-#include "task.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 /* USER CODE END Includes */
@@ -58,7 +56,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern ETH_HandleTypeDef heth;
+extern ETH_HandleTypeDef EthHandle;
 extern CAN_HandleTypeDef hcan3;
 extern DMA_HandleTypeDef hdma_usart3_rx;
 extern TIM_HandleTypeDef htim14;
@@ -199,7 +197,7 @@ void ETH_IRQHandler(void)
   /* USER CODE BEGIN ETH_IRQn 0 */
 
   /* USER CODE END ETH_IRQn 0 */
-  HAL_ETH_IRQHandler(&heth);
+  HAL_ETH_IRQHandler(&EthHandle);
   /* USER CODE BEGIN ETH_IRQn 1 */
 
   /* USER CODE END ETH_IRQn 1 */

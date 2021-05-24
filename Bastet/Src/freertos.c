@@ -32,8 +32,15 @@
 #include "pdu.h"
 #include "semphr.h"
 #include "lwip/opt.h"
+#include "lwip/timeouts.h"
+#include "lwip/tcpip.h"
+#include "netif/ethernet.h"
+#include "netif/etharp.h"
+#include "lwip/tcp.h"
+#include "ethernetif.h"
 #include "lwip/arch.h"
 #include "lwip/api.h"
+#include "lwip/apps/fs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +54,23 @@ typedef struct
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+/*Static IP ADDRESS*/
+#define IP_ADDR0   192
+#define IP_ADDR1   168
+#define IP_ADDR2   0
+#define IP_ADDR3   10
+   
+/*NETMASK*/
+#define NETMASK_ADDR0   255
+#define NETMASK_ADDR1   255
+#define NETMASK_ADDR2   255
+#define NETMASK_ADDR3   0
 
+/*Gateway Address*/
+#define GW_ADDR0   192
+#define GW_ADDR1   168
+#define GW_ADDR2   0
+#define GW_ADDR3   1 
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -68,11 +91,15 @@ osThreadId vServoControlHandle;
 osMessageQId xQueuePDUDateHandle;
 osMessageQId xQueueVelDateHandle;
 osMessageQId xQueueAngleDateHandle;
+osMessageQId xQueueTcpCmdHandle;
 osSemaphoreId dmaReciveSemaphoreHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-   
+struct netif gnetif; /* network interface structure */
+
+/* Private function prototypes -----------------------------------------------*/
+void Netif_Config(void);
 /* USER CODE END FunctionPrototypes */
 
 void vTcpTask(void const * argument);
@@ -141,13 +168,17 @@ void MX_FREERTOS_Init(void) {
   osMessageQDef(xQueueAngleDate, 4, float);
   xQueueAngleDateHandle = osMessageCreate(osMessageQ(xQueueAngleDate), NULL);
 
+  /* definition and creation of xQueueTcpCmd */
+  osMessageQDef(xQueueTcpCmd, 10, TcpCmd_t);
+  xQueueTcpCmdHandle = osMessageCreate(osMessageQ(xQueueTcpCmd), NULL);
+
   /* USER CODE BEGIN RTOS_QUEUES */
   /* add queues, ... */
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
   /* definition and creation of tcpTask */
-  osThreadDef(tcpTask, vTcpTask, 6, 0, 3000);
+  osThreadDef(tcpTask, vTcpTask, osPriorityAboveNormal, 0, 3000);
   tcpTaskHandle = osThreadCreate(osThread(tcpTask), NULL);
 
   /* definition and creation of vKinematica */
@@ -178,11 +209,30 @@ void MX_FREERTOS_Init(void) {
   * @param  argument: Not used
   * @retval None
   */
+
+uint16_t pow(uint16_t num,uint16_t pow)
+{
+  uint16_t i,rez=1;
+  for(i=1;i<=pow;i++)
+  {
+    rez*=num;
+  }
+  return rez;
+}
+
 /* USER CODE END Header_vTcpTask */
 void vTcpTask(void const * argument)
 {
   /* init code for LWIP */
-  MX_LWIP_Init();
+  tcpip_init(NULL, NULL);
+  
+  /* Initialize the LwIP stack */
+  Netif_Config();
+  
+  /* Initialize webserver demo */
+  
+  /* Notify user about the network interface config */
+  //User_notification(&gnetif);
   /* USER CODE BEGIN vTcpTask */
   struct netconn *conn, *newconn;
   err_t err, accept_err;
@@ -213,34 +263,37 @@ void vTcpTask(void const * argument)
                 /* Process the new connection. */
                 if (accept_err == ERR_OK)
                 {
-                    while ((recv_err = netconn_recv(newconn, &buf)) == ERR_OK)
+                   while ((recv_err = netconn_recv(newconn, &buf)) == ERR_OK)
                     {
                         do
                         {
                             netbuf_data(buf, &data, &len);
-                            netconn_write(newconn, data, len, NETCONN_COPY);
+                            //netconn_write(newconn, data, len, NETCONN_COPY);
                         } while (netbuf_next(buf) >= 0);
                         netbuf_delete(buf);
-                        if (len>=5)
+                        if (len>=3)
                         {
-                            i=len-2;
+                            cmd.cmd_ang=0;
+                            cmd.cmd_vel=0;
+                            i=len-1;
                             i_pow=0;
-                            while(data[i]!=';' || data[i]!='-'){
-                                cmd.cmd_ang += data[i]*i_pow;
+                            while(data[i]!=','){
+                                cmd.cmd_ang += (data[i]-0x30)*pow(10,i_pow);
                                 i--;
                                 i_pow++;
-                            }  
-                            if (data[i]=='-') cmd.cmd_ang=-cmd.cmd_ang;                      
-                            i=len--;
+                            }                       
+                            i--;                
                             i_pow=0;
-                            while(data[i]!='[' || data[i]!='-'){
-                                cmd.cmd_vel += data[i]*i_pow;
+                            while(data[i]!='/')
+                            {
+                                cmd.cmd_vel += (data[i]-0x30)*pow(10,i_pow);
                                 i--;
                                 i_pow++;
                             }
-                            if (data[i]=='-') cmd.cmd_vel=-cmd.cmd_vel;  
+                            xQueueSendToBack(xQueueTcpCmdHandle,&cmd,0);
                         }
                     }
+                  
                     /* Close connection and discard connection identifier. */
                     netconn_close(newconn);
                     netconn_delete(newconn);
@@ -268,7 +321,6 @@ void vKinematicaTask(void const * argument)
   /* USER CODE BEGIN vKinematicaTask */
   /* Infinite loop */
   Motor_t Motors[4];
-  //Motors[0].motorID=WFL;
   Motors[0].motorID=WFL;
   Motors[1].motorID=WFR;
   Motors[2].motorID=WRL;
@@ -319,7 +371,7 @@ void vKinematicaTask(void const * argument)
       }
       if(pduData.gear==1)
       {
-        normaliz(pduData.vel_mean, pduData.rx_mean,pduData.dir_mean, pduData.ry_mean);
+        normaliz(pduData.vel_mean, pduData.rx_mean,pduData.dir_mean, pduData.ry_mean,pduData.elevdr);
         kinematica(pduData.mode, &Motors, &Servos);
         for (i=0; i<4; i++){
           xQueueSendToBack(xQueueAngleDateHandle,&Servos,0);
@@ -349,6 +401,7 @@ void vPDUReaderTask(void const * argument)
   /* USER CODE BEGIN vPDUReaderTask */
   /* Infinite loop */
   PduData_t pduData;
+  TcpCmd_t cmd;
 	uint16_t channels[18];
 	while (1)
   {
@@ -363,18 +416,20 @@ void vPDUReaderTask(void const * argument)
 		pduData.rudr=channels[RUDDR];
 		if(checkDate(pduData.vel_mean) && checkDate(pduData.dir_mean) && checkDate(pduData.rx_mean) && \
 				checkDate(pduData.elevdr) && checkDate(pduData.aildr) && checkDate(pduData.gear) && checkDate(pduData.ry_mean)) 
-    {
-						
+    {						
 			pduData.elevdr=checkLevel(pduData.elevdr);
       pduData.aildr=checkLevel(pduData.aildr);
       pduData.gear=checkLevel(pduData.gear);
       pduData.rudr=checkLevel(pduData.rudr);
-      if(pduData.elevdr==0)
-		    xQueueSendToBack(xQueuePDUDateHandle, &pduData, 0);
-      else
+      if(pduData.elevdr==1)
       {
-        
+        if (xQueueReceive(xQueueTcpCmdHandle,&cmd,portMAX_DELAY)==pdTRUE)
+        {          
+          pduData.vel_mean=cmd.cmd_vel;
+          pduData.dir_mean=cmd.cmd_ang;
+        }  
       }
+		  xQueueSendToBack(xQueuePDUDateHandle, &pduData, 0);
 			// xTaskSuspend(vKinematicaHandle);
 			// xTaskSuspend(vServoControlHandle);//date ready
 		}
@@ -467,6 +522,40 @@ void vServoControlTask(void const * argument)
     vTaskDelay(100);
 	}
   /* USER CODE END vServoControlTask */
+}
+
+void Netif_Config(void)
+{
+  ip_addr_t ipaddr;
+  ip_addr_t netmask;
+  ip_addr_t gw;
+ 
+#ifdef USE_DHCP
+  ip_addr_set_zero_ip4(&ipaddr);
+  ip_addr_set_zero_ip4(&netmask);
+  ip_addr_set_zero_ip4(&gw);
+#else
+  IP_ADDR4(&ipaddr,IP_ADDR0,IP_ADDR1,IP_ADDR2,IP_ADDR3);
+  IP_ADDR4(&netmask,NETMASK_ADDR0,NETMASK_ADDR1,NETMASK_ADDR2,NETMASK_ADDR3);
+  IP_ADDR4(&gw,GW_ADDR0,GW_ADDR1,GW_ADDR2,GW_ADDR3);
+#endif /* USE_DHCP */
+  
+  /* add the network interface */    
+  netif_add(&gnetif, &ipaddr, &netmask, &gw, NULL, &ethernetif_init, &tcpip_input);
+  
+  /*  Registers the default network interface. */
+  netif_set_default(&gnetif);
+  
+  if (netif_is_link_up(&gnetif))
+  {
+    /* When the netif is fully configured this function must be called.*/
+    netif_set_up(&gnetif);
+  }
+  else
+  {
+    /* When the netif link is down this function must be called */
+    netif_set_down(&gnetif);
+  }
 }
 
 /* Private application code --------------------------------------------------*/

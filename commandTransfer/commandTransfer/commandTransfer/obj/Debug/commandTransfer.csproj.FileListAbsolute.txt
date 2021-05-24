@@ -1,0 +1,20 @@
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\bin\Debug\commandTransfer.exe.config
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\bin\Debug\commandTransfer.exe
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\bin\Debug\commandTransfer.pdb
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\obj\Debug\commandTransfer.csprojAssemblyReference.cache
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\obj\Debug\commandTransfer.Form1.resources
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\obj\Debug\commandTransfer.Properties.Resources.resources
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\obj\Debug\commandTransfer.csproj.GenerateResource.cache
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\obj\Debug\commandTransfer.csproj.CoreCompileInputs.cache
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\obj\Debug\commandTransfer.exe
+D:\Program Files (x86)\u-blox\u-center_v21.02\commandTransfer\commandTransfer\obj\Debug\commandTransfer.pdb
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\bin\Debug\commandTransfer.exe.config
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\bin\Debug\commandTransfer.exe
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\bin\Debug\commandTransfer.pdb
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\obj\Debug\commandTransfer.csprojAssemblyReference.cache
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\obj\Debug\commandTransfer.Form1.resources
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\obj\Debug\commandTransfer.Properties.Resources.resources
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\obj\Debug\commandTransfer.csproj.GenerateResource.cache
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\obj\Debug\commandTransfer.csproj.CoreCompileInputs.cache
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\obj\Debug\commandTransfer.exe
+C:\work\project\Kisa_Control_System\commandTransfer\commandTransfer\commandTransfer\obj\Debug\commandTransfer.pdb
