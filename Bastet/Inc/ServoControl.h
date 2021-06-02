@@ -13,10 +13,9 @@ typedef struct
 	motorID_t servoId;
 	float currentAngle;
 	float targetAngle;
-	int16_t P;
-	int16_t I;
-	int16_t torque;	
-	int16_t intergator;
+	int16_t dir;
+	float dAngle;
+	int16_t initFlag;
 }servo_t;
 
 typedef struct
@@ -27,6 +26,11 @@ typedef struct
 	float targetRearRight;   
 }servoTarget_t;
 
-void PI_control(servo_t* Servo);
 void getCurrentAngle(char i, servo_t* Servo, SPI_HandleTypeDef* hspi);
+void tim1Init(void);
+void tim8Init(void);
+void tim9Init(void);
+void tim12Init(void);
+void dirInit(void);
+void setServo(servo_t Servos, char i);
 #endif

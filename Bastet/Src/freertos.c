@@ -474,51 +474,75 @@ void vMotorControlTask(void const * argument)
 void vServoControlTask(void const * argument)
 {
   /* USER CODE BEGIN vServoControlTask */
-  /* Infinite loop */
   uint8_t i=0;
   servo_t Servos[4];
   Motor_t motor;
   servoTarget_t servotarget;
-  motor.command=CHANGE_TORQUE;
+  float gm;
   Servos[SERVO_FL].servoId=SFL;
   Servos[SERVO_FR].servoId=SFR;
   Servos[SERVO_RL].servoId=SRL;
   Servos[SERVO_RR].servoId=SRR; 
+  
+  Servos[SERVO_FL].targetAngle=0;
+  Servos[SERVO_FR].targetAngle=0;
+  Servos[SERVO_RL].targetAngle=0;
+  Servos[SERVO_RR].targetAngle=0;
 
-  Servos[SERVO_FL].P=100;
-  Servos[SERVO_FR].P=100;
-  Servos[SERVO_RL].P=100;
-  Servos[SERVO_RR].P=100;
+  Servos[SERVO_FL].currentAngle=0;
+  Servos[SERVO_FR].currentAngle=0;
+  Servos[SERVO_RL].currentAngle=0;
+  Servos[SERVO_RR].currentAngle=0;
 
-  Servos[SERVO_FL].I=10;
-  Servos[SERVO_FR].I=10;
-  Servos[SERVO_RL].I=10;
-  Servos[SERVO_RR].I=10; 
+  Servos[SERVO_FL].initFlag=1;
+  Servos[SERVO_FR].initFlag=1;
+  Servos[SERVO_RL].initFlag=1;
+  Servos[SERVO_RR].initFlag=1;
+
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
-	while(1)
+  dirInit();
+  tim1Init();
+  tim2Init();
+  tim8Init();
+  tim9Init();
+  /* Infinite loop */
+  while(1)
   {
-    if(xQueueReceive(xQueueAngleDateHandle,&servotarget,0)==pdTRUE)
+    /*if(xQueueReceive(xQueueAngleDateHandle,&servotarget,0)==pdTRUE)
     {
        Servos[SERVO_FL].targetAngle=servotarget.targetFrontLeft;
        Servos[SERVO_FR].targetAngle=servotarget.targetFrontRight;
        Servos[SERVO_RL].targetAngle=servotarget.targetRearLeft;
        Servos[SERVO_RR].targetAngle=servotarget.targetRearRight;
-    }		
-    for(i=0;i<4;i++)
+    }		*/
+    for (i = 0; i < 4; i++)
     {
-      getCurrentAngle(i,&Servos[i], &hspi3);
-      motor.prevRefImpact=Servos[i].torque;
-      PI_control(&Servos[i]);
-      motor.refImpact=Servos[i].torque;
-      if(motor.refImpact!=motor.prevRefImpact)
-      {
-        motor.motorID=Servos[i].servoId;
-        xQueueSendToBack(xQueueVelDateHandle,&motor,0);
-      }
-    }
+      getCurrentAngle(0, &Servos[0], &hspi3);
+    } 
+    Servos[SERVO_FL].targetAngle=1;
+
+    Servos[SERVO_FL].dAngle=fabs(Servos[SERVO_FL].targetAngle-Servos[SERVO_FL].currentAngle); 
+    Servos[SERVO_FR].dAngle=fabs(Servos[SERVO_FR].targetAngle-Servos[SERVO_FR].currentAngle);
+    Servos[SERVO_RL].dAngle=fabs(Servos[SERVO_RL].targetAngle-Servos[SERVO_RL].currentAngle);
+    Servos[SERVO_RR].dAngle=fabs(Servos[SERVO_RR].targetAngle-Servos[SERVO_RR].currentAngle);	
+
+    Servos[SERVO_FL].dir=intSign(Servos[SERVO_FL].targetAngle-Servos[SERVO_FL].currentAngle);
+    Servos[SERVO_FR].dir=intSign(Servos[SERVO_FR].targetAngle-Servos[SERVO_FR].currentAngle);
+    Servos[SERVO_RL].dir=intSign(Servos[SERVO_RL].targetAngle-Servos[SERVO_RL].currentAngle);
+    Servos[SERVO_RR].dir=intSign(Servos[SERVO_RR].targetAngle-Servos[SERVO_RR].currentAngle);
+
+    gm=Servos[SERVO_FL].dAngle;
+    if (gm<Servos[SERVO_FR].dAngle) gm=Servos[SERVO_FR].dAngle;
+    if (gm<Servos[SERVO_RL].dAngle) gm=Servos[SERVO_RL].dAngle;
+    if (gm<Servos[SERVO_RR].dAngle) gm=Servos[SERVO_RR].dAngle;
+    TIM1->ARR=150*gm/Servos[SERVO_FL].dAngle;
+    TIM8->ARR=150*gm/Servos[SERVO_FR].dAngle;
+    TIM9->ARR=150*gm/Servos[SERVO_RL].dAngle;
+    TIM12->ARR=150*gm/Servos[SERVO_RR].dAngle;
+    for (i = 0; i < 4; i++) setServo(Servos[i],i);
     vTaskDelay(100);
 	}
   /* USER CODE END vServoControlTask */

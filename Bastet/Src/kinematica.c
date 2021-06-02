@@ -24,6 +24,12 @@ double sign(double a){
 	else return 0;
 }
 
+int16_t intSign(double a){
+	if (a>0) return 1;
+	else if (a<0) return -1;
+	else return 0;
+}
+
 void normaliz(uint16_t vel_mean, uint16_t rx_mean, uint16_t dir_mean, uint16_t ry_mean, uint16_t elevdr){
 	float d_vel=0;
 	float d_ry=0;

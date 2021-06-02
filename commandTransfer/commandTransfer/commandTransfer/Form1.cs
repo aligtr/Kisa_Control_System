@@ -92,7 +92,7 @@ namespace commandTransfer
             }
             catch (SocketException ex)
             {
-                richTextBox1.Text = ex.Message + "\n" + richTextBox1.Text;
+                richTextBox1.Text = ex.Message + "\n"  + richTextBox1.Text;
                 timer1.Stop();
             }
             catch (Exception ex)
