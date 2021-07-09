@@ -92,7 +92,7 @@ void getCurrentAngle(char i, servo_t* Servo, SPI_HandleTypeDef* hspi)
 		break;
 	}
 	encoderDate = ((uint32_t)buff[0]<<4 | (uint32_t)buff[3]<<3  | ((uint32_t)buff[2])/32);
-
+	
 	Servo->currentAngle = (float)encoderDate*3.14*2/4096-3.14;
 }
 

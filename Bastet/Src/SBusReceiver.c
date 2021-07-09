@@ -1,14 +1,17 @@
 #include "SBusReceiver.h"
 #include "main.h"
 
-extern UART_HandleTypeDef huart3;
+extern UART_HandleTypeDef huart1;
 extern osSemaphoreId dmaReciveSemaphoreHandle;
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	xSemaphoreGiveFromISR(dmaReciveSemaphoreHandle,&xHigherPriorityTaskWoken);
-	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);	
+	if(huart==&huart1)
+	{
+		BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+		xSemaphoreGiveFromISR(dmaReciveSemaphoreHandle,&xHigherPriorityTaskWoken);
+		portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+	}	
 }
 
 uint8_t buffer[100];
@@ -16,7 +19,7 @@ uint8_t buffer[100];
 void receiveSBusDate(uint16_t* channels)
 {
 	uint8_t i=0;
-	HAL_UART_Receive_DMA(&huart3,(uint8_t *)buffer,100);
+	HAL_UART_Receive_DMA(&huart1,(uint8_t *)buffer,100);
 	if(xSemaphoreTake(dmaReciveSemaphoreHandle,portMAX_DELAY)==pdTRUE)
 	{
 		for (i = 0; i < 100; i++)

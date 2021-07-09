@@ -31,16 +31,6 @@
 #include "ServoControl.h"
 #include "pdu.h"
 #include "semphr.h"
-#include "lwip/opt.h"
-#include "lwip/timeouts.h"
-#include "lwip/tcpip.h"
-#include "netif/ethernet.h"
-#include "netif/etharp.h"
-#include "lwip/tcp.h"
-#include "ethernetif.h"
-#include "lwip/arch.h"
-#include "lwip/api.h"
-#include "lwip/apps/fs.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -96,7 +86,6 @@ osSemaphoreId dmaReciveSemaphoreHandle;
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
-struct netif gnetif; /* network interface structure */
 
 /* Private function prototypes -----------------------------------------------*/
 void Netif_Config(void);
@@ -108,7 +97,6 @@ void vPDUReaderTask(void const * argument);
 void vMotorControlTask(void const * argument);
 void vServoControlTask(void const * argument);
 
-extern void MX_LWIP_Init(void);
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
 
 /* GetIdleTaskMemory prototype (linked to static allocation support) */
@@ -223,88 +211,78 @@ uint16_t pow(uint16_t num,uint16_t pow)
 /* USER CODE END Header_vTcpTask */
 void vTcpTask(void const * argument)
 {
-  /* init code for LWIP */
-  tcpip_init(NULL, NULL);
-  
-  /* Initialize the LwIP stack */
-  Netif_Config();
-  
-  /* Initialize webserver demo */
-  
-  /* Notify user about the network interface config */
-  //User_notification(&gnetif);
   /* USER CODE BEGIN vTcpTask */
-  struct netconn *conn, *newconn;
-  err_t err, accept_err;
-  struct netbuf* buf;
-  uint8_t* data;
-  uint16_t len;
-  err_t recv_err;
-  TcpCmd_t cmd;
-  uint8_t cmd_data[5];
-  int8_t i, i_pow;
+  // struct netconn *conn, *newconn;
+  // err_t err, accept_err;
+  // struct netbuf* buf;
+  // uint8_t* data;
+  // uint16_t len;
+  // err_t recv_err;
+  // TcpCmd_t cmd;
+  // uint8_t cmd_data[5];
+  // int8_t i, i_pow;
   for(;;)
   {
     /* Create a new connection identifier. */
-    conn = netconn_new(NETCONN_TCP);
-    if (conn != NULL)
-    {
-        /* Bind connection to well known port number 80. */
-        err = netconn_bind(conn, NULL, 80);
-        if (err == ERR_OK)
-        {
-            /* Tell connection to go into listening mode. */
-            netconn_listen(conn);
-            while (1)
-            {
-                /* Grab new connection. */
-                accept_err = netconn_accept(conn, &newconn);
+    // conn = netconn_new(NETCONN_TCP);
+    // if (conn != NULL)
+    // {
+    //     /* Bind connection to well known port number 80. */
+    //     err = netconn_bind(conn, NULL, 80);
+    //     if (err == ERR_OK)
+    //     {
+    //         /* Tell connection to go into listening mode. */
+    //         netconn_listen(conn);
+    //         while (1)
+    //         {
+    //             /* Grab new connection. */
+    //             accept_err = netconn_accept(conn, &newconn);
 
-                /* Process the new connection. */
-                if (accept_err == ERR_OK)
-                {
-                   while ((recv_err = netconn_recv(newconn, &buf)) == ERR_OK)
-                    {
-                        do
-                        {
-                            netbuf_data(buf, &data, &len);
-                            //netconn_write(newconn, data, len, NETCONN_COPY);
-                        } while (netbuf_next(buf) >= 0);
-                        netbuf_delete(buf);
-                        if (len>=3)
-                        {
-                            cmd.cmd_ang=0;
-                            cmd.cmd_vel=0;
-                            i=len-1;
-                            i_pow=0;
-                            while(data[i]!=','){
-                                cmd.cmd_ang += (data[i]-0x30)*pow(10,i_pow);
-                                i--;
-                                i_pow++;
-                            }                       
-                            i--;                
-                            i_pow=0;
-                            while(data[i]!='/')
-                            {
-                                cmd.cmd_vel += (data[i]-0x30)*pow(10,i_pow);
-                                i--;
-                                i_pow++;
-                            }
-                            xQueueSendToBack(xQueueTcpCmdHandle,&cmd,0);
-                        }
-                    }
+    //             /* Process the new connection. */
+    //             if (accept_err == ERR_OK)
+    //             {
+    //                while ((recv_err = netconn_recv(newconn, &buf)) == ERR_OK)
+    //                 {
+    //                     do
+    //                     {
+    //                         netbuf_data(buf, &data, &len);
+    //                         //netconn_write(newconn, data, len, NETCONN_COPY);
+    //                     } while (netbuf_next(buf) >= 0);
+    //                     netbuf_delete(buf);
+    //                     if (len>=3)
+    //                     {
+    //                         cmd.cmd_ang=0;
+    //                         cmd.cmd_vel=0;
+    //                         i=len-1;
+    //                         i_pow=0;
+    //                         while(data[i]!=','){
+    //                             cmd.cmd_ang += (data[i]-0x30)*pow(10,i_pow);
+    //                             i--;
+    //                             i_pow++;
+    //                         }                       
+    //                         i--;                
+    //                         i_pow=0;
+    //                         while(data[i]!='/')
+    //                         {
+    //                             cmd.cmd_vel += (data[i]-0x30)*pow(10,i_pow);
+    //                             i--;
+    //                             i_pow++;
+    //                         }
+    //                         xQueueSendToBack(xQueueTcpCmdHandle,&cmd,0);
+    //                     }
+    //                 }
                   
-                    /* Close connection and discard connection identifier. */
-                    netconn_close(newconn);
-                    netconn_delete(newconn);
-                }
-            }
-        }
-        else
-        {
-            netconn_delete(newconn);
-        }
-    }
+    //                 /* Close connection and discard connection identifier. */
+    //                 netconn_close(newconn);
+    //                 netconn_delete(newconn);
+    //             }
+    //         }
+    //     }
+    //     else
+    //     {
+    //         netconn_delete(newconn);
+    //     }
+    // }
   }
   /* USER CODE END vTcpTask */
 }
@@ -511,19 +489,18 @@ void vServoControlTask(void const * argument)
   /* Infinite loop */
   while(1)
   {
-    /*if(xQueueReceive(xQueueAngleDateHandle,&servotarget,0)==pdTRUE)
+    if(xQueueReceive(xQueueAngleDateHandle,&servotarget,0)==pdTRUE)
     {
        Servos[SERVO_FL].targetAngle=servotarget.targetFrontLeft;
        Servos[SERVO_FR].targetAngle=servotarget.targetFrontRight;
        Servos[SERVO_RL].targetAngle=servotarget.targetRearLeft;
        Servos[SERVO_RR].targetAngle=servotarget.targetRearRight;
-    }		*/
+    }		
     for (i = 0; i < 4; i++)
     {
-      getCurrentAngle(0, &Servos[0], &hspi3);
+      getCurrentAngle(i, &Servos[i], &hspi3);
     } 
-    Servos[SERVO_FL].targetAngle=1;
-
+    
     Servos[SERVO_FL].dAngle=fabs(Servos[SERVO_FL].targetAngle-Servos[SERVO_FL].currentAngle); 
     Servos[SERVO_FR].dAngle=fabs(Servos[SERVO_FR].targetAngle-Servos[SERVO_FR].currentAngle);
     Servos[SERVO_RL].dAngle=fabs(Servos[SERVO_RL].targetAngle-Servos[SERVO_RL].currentAngle);
@@ -538,6 +515,7 @@ void vServoControlTask(void const * argument)
     if (gm<Servos[SERVO_FR].dAngle) gm=Servos[SERVO_FR].dAngle;
     if (gm<Servos[SERVO_RL].dAngle) gm=Servos[SERVO_RL].dAngle;
     if (gm<Servos[SERVO_RR].dAngle) gm=Servos[SERVO_RR].dAngle;
+    
     TIM1->ARR=150*gm/Servos[SERVO_FL].dAngle;
     TIM8->ARR=150*gm/Servos[SERVO_FR].dAngle;
     TIM9->ARR=150*gm/Servos[SERVO_RL].dAngle;
@@ -546,40 +524,6 @@ void vServoControlTask(void const * argument)
     vTaskDelay(100);
 	}
   /* USER CODE END vServoControlTask */
-}
-
-void Netif_Config(void)
-{
-  ip_addr_t ipaddr;
-  ip_addr_t netmask;
-  ip_addr_t gw;
- 
-#ifdef USE_DHCP
-  ip_addr_set_zero_ip4(&ipaddr);
-  ip_addr_set_zero_ip4(&netmask);
-  ip_addr_set_zero_ip4(&gw);
-#else
-  IP_ADDR4(&ipaddr,IP_ADDR0,IP_ADDR1,IP_ADDR2,IP_ADDR3);
-  IP_ADDR4(&netmask,NETMASK_ADDR0,NETMASK_ADDR1,NETMASK_ADDR2,NETMASK_ADDR3);
-  IP_ADDR4(&gw,GW_ADDR0,GW_ADDR1,GW_ADDR2,GW_ADDR3);
-#endif /* USE_DHCP */
-  
-  /* add the network interface */    
-  netif_add(&gnetif, &ipaddr, &netmask, &gw, NULL, &ethernetif_init, &tcpip_input);
-  
-  /*  Registers the default network interface. */
-  netif_set_default(&gnetif);
-  
-  if (netif_is_link_up(&gnetif))
-  {
-    /* When the netif is fully configured this function must be called.*/
-    netif_set_up(&gnetif);
-  }
-  else
-  {
-    /* When the netif link is down this function must be called */
-    netif_set_down(&gnetif);
-  }
 }
 
 /* Private application code --------------------------------------------------*/

@@ -58,7 +58,7 @@ void normaliz(uint16_t vel_mean, uint16_t rx_mean, uint16_t dir_mean, uint16_t r
 	Rg0=d_dir*k_dir/(dir_period_max-dir_period_zero);
 	if (fabs(Rg0)>k_dir) Rg0=sign(Rg0)*k_dir;
 	R=L/2/tan(Rg0)*10;
-	if (fabs(R)<0.1) R=0.00001*sign(R);
+	if (fabs(R)<0.1) R=0.1*sign(R);//минимальный радиус поворота
 	if (fabs(R)>50) R=10000;
 	
 	V=(d_vel)/((float)(vel_period_max-vel_period_zero));
@@ -67,7 +67,7 @@ void normaliz(uint16_t vel_mean, uint16_t rx_mean, uint16_t dir_mean, uint16_t r
 
 	gam=(d_ry)/(ry_period_max-ry_period_zero)*k_gam;
 	if (fabs(gam)<0.01) gam=0;
-	if (fabs(gam)>(pi/2-0.1)) gam=pi/2*sign(gam);
+	if (fabs(gam)>(pi/4-0.1)) gam=pi/4*sign(gam);//предельные углы поворота
 	if (gam!=0) R=100000;
 }
 
