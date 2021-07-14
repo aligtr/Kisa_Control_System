@@ -259,14 +259,14 @@ void vKinematicaTask(void const * argument)
   servoTarget_t Servos;
   PduData_t pduData;
   uint8_t i=0;
-  tim1Init();
-  tim12Init();
-  tim8Init();
-  tim9Init();
-  NVIC_EnableIRQ(TIM1_CC_IRQn);
-	NVIC_EnableIRQ(TIM8_CC_IRQn);
-	NVIC_EnableIRQ(TIM1_BRK_TIM9_IRQn);
-	NVIC_EnableIRQ(TIM8_BRK_TIM12_IRQn);
+  // tim1Init();
+  // tim12Init();
+  // tim8Init();
+  // tim9Init();
+  // NVIC_EnableIRQ(TIM1_CC_IRQn);
+	// NVIC_EnableIRQ(TIM8_CC_IRQn);
+	// NVIC_EnableIRQ(TIM1_BRK_TIM9_IRQn);
+	// NVIC_EnableIRQ(TIM8_BRK_TIM12_IRQn);
 	while(1){
 		if (xQueueReceive(xQueuePDUDateHandle,&pduData,portMAX_DELAY)==pdTRUE)
     {
@@ -371,8 +371,7 @@ void vPDUReaderTask(void const * argument)
 		}
 		else
     {
-			// xTaskResume(vKinematicaHandle);
-			// xTaskResume(vServoControlHandle);//no pdu
+      
 		}
 	
 	}
@@ -394,7 +393,7 @@ void vMotorControlTask(void const * argument)
   {
     if(xQueueReceive(xQueueVelDateHandle,&motor,portMAX_DELAY)==pdTRUE)
     {
-      //motorRealeseCommand(motor);
+      motorRealeseCommand(motor);
       osDelay(10);
     }
   }

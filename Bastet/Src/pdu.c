@@ -7,7 +7,7 @@ char checkDate(uint32_t date){
 
 uint8_t checkLevel(uint16_t data)
 {
-	if(data>300)
+	if(data>385)
 	{
 		return 1;
 	}
