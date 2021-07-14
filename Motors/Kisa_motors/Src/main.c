@@ -98,7 +98,7 @@ static void MX_NVIC_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-#define CAN_ID 0x230
+#define CAN_ID 0x201
 
 void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 {
@@ -107,7 +107,7 @@ void HAL_FDCAN_RxFifo0Callback(FDCAN_HandleTypeDef *hfdcan, uint32_t RxFifo0ITs)
 	int16_t newSpeed;
 	int16_t newTorque;
 	HAL_FDCAN_GetRxMessage(hfdcan,FDCAN_RX_FIFO0,&RxHeader,msgData);
-	if(RxHeader.Identifier==0x200)
+	if(RxHeader.Identifier==CAN_ID)
 	{
 		switch (msgData[0])
 		{

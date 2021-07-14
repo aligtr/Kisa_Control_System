@@ -1,7 +1,6 @@
 #ifndef SBUS
 #define SBUS
 
-#include "dma.h"
 #include "usart.h"
 
 #define RIGHT_VERT 1 //342-1706
@@ -15,7 +14,13 @@
 
 
 
-void receiveSBusDate(uint16_t * channels);
-void uartRxDMATransferCallback(DMA_HandleTypeDef *dmaHandle);
+void tim2Init1(void);
+void tim2Init2(void);
+void tim3Init1(void);
+void tim3Init2(void);
+void tim4Init1(void);
+void tim4Init2(void);
+void tim5Init1(void);
+void tim5Init2(void);
 
 #endif

@@ -27,10 +27,10 @@ typedef struct
 }servoTarget_t;
 
 void getCurrentAngle(char i, servo_t* Servo, SPI_HandleTypeDef* hspi);
-void tim1Init(void);
-void tim8Init(void);
-void tim9Init(void);
-void tim12Init(void);
+// void tim1Init(void);
+// void tim8Init(void);
+// void tim9Init(void);
+//void tim12Init(void);
 void dirInit(void);
 void setServo(servo_t Servos, char i);
 #endif
