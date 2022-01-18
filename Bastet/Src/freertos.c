@@ -31,9 +31,6 @@
 #include "ServoControl.h"
 #include "pdu.h"
 #include "semphr.h"
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -75,9 +72,8 @@ typedef struct
 /* USER CODE BEGIN Variables */
 extern CAN_HandleTypeDef hcan3;
 extern SPI_HandleTypeDef hspi3;
-extern TIM_HandleTypeDef htim1;
 /* USER CODE END Variables */
-osThreadId defaultTaskHandle;
+osThreadId tcpTaskHandle;
 osThreadId vKinematicaHandle;
 osThreadId vPDUReaderHandle;
 osThreadId vMotorControlHandle;
@@ -169,9 +165,9 @@ void MX_FREERTOS_Init(void) {
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
-  /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, vTcpTask, osPriorityIdle, 0, 512);
-  defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
+  /* definition and creation of tcpTask */
+  osThreadDef(tcpTask, vTcpTask, osPriorityAboveNormal, 0, 3000);
+  tcpTaskHandle = osThreadCreate(osThread(tcpTask), NULL);
 
   /* definition and creation of vKinematica */
   osThreadDef(vKinematica, vKinematicaTask, osPriorityHigh, 0, 512);
@@ -227,7 +223,67 @@ void vTcpTask(void const * argument)
   // int8_t i, i_pow;
   for(;;)
   {
-    osDelay(1000);
+    /* Create a new connection identifier. */
+    // conn = netconn_new(NETCONN_TCP);
+    // if (conn != NULL)
+    // {
+    //     /* Bind connection to well known port number 80. */
+    //     err = netconn_bind(conn, NULL, 80);
+    //     if (err == ERR_OK)
+    //     {
+    //         /* Tell connection to go into listening mode. */
+    //         netconn_listen(conn);
+    //         while (1)
+    //         {
+    //             /* Grab new connection. */
+    //             accept_err = netconn_accept(conn, &newconn);
+
+    //             /* Process the new connection. */
+    //             if (accept_err == ERR_OK)
+    //             {
+    //                while ((recv_err = netconn_recv(newconn, &buf)) == ERR_OK)
+    //                 {
+    //                     do
+    //                     {
+    //                         netbuf_data(buf, &data, &len);
+    //                         //netconn_write(newconn, data, len, NETCONN_COPY);
+    //                     } while (netbuf_next(buf) >= 0);
+    //                     netbuf_delete(buf);
+    //                     if (len>=3)
+    //                     {
+    //                         cmd.cmd_ang=0;
+    //                         cmd.cmd_vel=0;
+    //                         i=len-1;
+    //                         i_pow=0;
+    //                         while(data[i]!=','){
+    //                             cmd.cmd_ang += (data[i]-0x30)*pow(10,i_pow);
+    //                             i--;
+    //                             i_pow++;
+    //                         }                       
+    //                         i--;                
+    //                         i_pow=0;
+    //                         while(data[i]!='/')
+    //                         {
+    //                             cmd.cmd_vel += (data[i]-0x30)*pow(10,i_pow);
+    //                             i--;
+    //                             i_pow++;
+    //                         }
+    //                         xQueueSendToBack(xQueueTcpCmdHandle,&cmd,0);
+    //                     }
+    //                 }
+                  
+    //                 /* Close connection and discard connection identifier. */
+    //                 netconn_close(newconn);
+    //                 netconn_delete(newconn);
+    //             }
+    //         }
+    //     }
+    //     else
+    //     {
+    //         netconn_delete(newconn);
+    //     }
+    // }
+    vTaskDelay(100);
   }
   /* USER CODE END vTcpTask */
 }
@@ -259,18 +315,10 @@ void vKinematicaTask(void const * argument)
   servoTarget_t Servos;
   PduData_t pduData;
   uint8_t i=0;
-  // tim1Init();
-  // tim12Init();
-  // tim8Init();
-  // tim9Init();
-  // NVIC_EnableIRQ(TIM1_CC_IRQn);
-	// NVIC_EnableIRQ(TIM8_CC_IRQn);
-	// NVIC_EnableIRQ(TIM1_BRK_TIM9_IRQn);
-	// NVIC_EnableIRQ(TIM8_BRK_TIM12_IRQn);
 	while(1){
 		if (xQueueReceive(xQueuePDUDateHandle,&pduData,portMAX_DELAY)==pdTRUE)
     {
-      if(pduData.elevdr==1 && (Motors[0].status==STOP || Motors[1].status==STOP || Motors[2].status==STOP || Motors[3].status==STOP))
+      if(pduData.gear==1 && (Motors[0].status==STOP || Motors[1].status==STOP || Motors[2].status==STOP || Motors[3].status==STOP))
       {
         Motors[0].command=MOTOR_START;
         Motors[1].command=MOTOR_START;
@@ -285,7 +333,7 @@ void vKinematicaTask(void const * argument)
         Motors[2].status=RUN;
         Motors[3].status=RUN;
       }
-      if(pduData.elevdr==0 && (Motors[0].status==RUN || Motors[1].status==RUN || Motors[2].status==RUN || Motors[3].status==RUN))
+      if(pduData.gear==0 && (Motors[0].status==RUN || Motors[1].status==RUN || Motors[2].status==RUN || Motors[3].status==RUN))
       {
         Motors[0].command=MOTOR_STOP;
         Motors[1].command=MOTOR_STOP;
@@ -299,8 +347,8 @@ void vKinematicaTask(void const * argument)
         Motors[1].status=STOP;
         Motors[2].status=STOP;
         Motors[3].status=STOP;
-      } 
-      if(pduData.elevdr==1)
+      }
+      if(pduData.gear==1)
       {
         normaliz(pduData.vel_mean, pduData.rx_mean,pduData.dir_mean, pduData.ry_mean,pduData.elevdr);
         kinematica(pduData.mode, &Motors, &Servos);
@@ -312,7 +360,7 @@ void vKinematicaTask(void const * argument)
           if(Motors[i].refImpact!=Motors[i].prevRefImpact)
           {
             xQueueSendToBack(xQueueVelDateHandle,&Motors[i],0);
-         }
+          }
         } 
       }
     }
@@ -333,47 +381,43 @@ void vPDUReaderTask(void const * argument)
   /* Infinite loop */
   PduData_t pduData;
   TcpCmd_t cmd;
-	uint16_t channels[18];
-  uint8_t str[200];
+	//uint16_t channels[18];
 	while (1)
   {
-		// receiveSBusDate(channels);
-    	
-    tim2Init1();
-    tim3Init1();
-    tim4Init1();
-    //tim5Init1();
-    osDelay(50);	
-		pduData.vel_mean=450;
-		pduData.dir_mean=TIM3->CCR2;
-		pduData.rx_mean=TIM4->CCR2;
-    pduData.elevdr=TIM2->CCR2;
-    //pduData.ry_mean=TIM5->CCR2;
-    tim2Init2();
-    tim3Init2();
-    tim4Init2();
-    osDelay(50);
-		pduData.rudr=TIM2->CCR1;
-		pduData.ry_mean=TIM4->CCR1;
-		
-    // sprintf(str,"Vel_mean:%d dir_mean:%d rx_mean:%d ry_mean:%d elevdr:%d aildr:%d gear:%d rudr:%d \n\r",pduData.vel_mean,pduData.dir_mean,pduData.rx_mean,pduData.ry_mean,pduData.elevdr,pduData.aildr,pduData.gear,pduData.rudr);
-		// HAL_UART_Transmit(&huart3,str,strlen(str),100);
-    if(checkDate(pduData.vel_mean) && checkDate(pduData.dir_mean) && checkDate(pduData.rx_mean) && \
-				checkDate(pduData.elevdr) && checkDate(pduData.ry_mean)) 
+		receiveSBusDate();
+		pduData.vel_mean=channels[RIGHT_VERT];
+		pduData.dir_mean=channels[RIGHT_HORIZ];
+		pduData.rx_mean=channels[LEFT_VERT];
+    pduData.ry_mean=channels[LEFT_HORIZ];
+		pduData.elevdr=channels[ELEVDR];
+		pduData.aildr=channels[AILDR];
+		pduData.gear=channels[GEAR];
+		pduData.rudr=channels[RUDDR];
+		if(checkDate(pduData.vel_mean) && checkDate(pduData.dir_mean) && checkDate(pduData.rx_mean) && \
+				checkDate(pduData.elevdr) && checkDate(pduData.aildr) && checkDate(pduData.gear) && checkDate(pduData.ry_mean)) 
     {						
 			pduData.elevdr=checkLevel(pduData.elevdr);
-      //pduData.aildr=checkLevel(pduData.aildr);
-      // pduData.gear=checkLevel(pduData.gear);
+      pduData.aildr=checkLevel(pduData.aildr);
+      pduData.gear=checkLevel(pduData.gear);
       pduData.rudr=checkLevel(pduData.rudr);
+      if(pduData.elevdr==1)
+      {
+        if (xQueueReceive(xQueueTcpCmdHandle,&cmd,portMAX_DELAY)==pdTRUE)
+        {          
+          pduData.vel_mean=cmd.cmd_vel;
+          pduData.dir_mean=cmd.cmd_ang;
+        }  
+      }
 		  xQueueSendToBack(xQueuePDUDateHandle, &pduData, 0);
 			// xTaskSuspend(vKinematicaHandle);
 			// xTaskSuspend(vServoControlHandle);//date ready
 		}
 		else
     {
-      
+			// xTaskResume(vKinematicaHandle);
+			// xTaskResume(vServoControlHandle);//no pdu
 		}
-	
+		vTaskDelay(100);			
 	}
   /* USER CODE END vPDUReaderTask */
 }
@@ -394,7 +438,6 @@ void vMotorControlTask(void const * argument)
     if(xQueueReceive(xQueueVelDateHandle,&motor,portMAX_DELAY)==pdTRUE)
     {
       motorRealeseCommand(motor);
-      osDelay(10);
     }
   }
   /* USER CODE END vMotorControlTask */
@@ -410,77 +453,18 @@ void vMotorControlTask(void const * argument)
 void vServoControlTask(void const * argument)
 {
   /* USER CODE BEGIN vServoControlTask */
-  uint8_t i=0;
-  servo_t Servos[4];
-  Motor_t motor;
-  servoTarget_t servotarget;
-  float gm;
-  Servos[SERVO_FL].servoId=SFL;
-  Servos[SERVO_FR].servoId=SFR;
-  Servos[SERVO_RL].servoId=SRL;
-  Servos[SERVO_RR].servoId=SRR; 
-  
-  Servos[SERVO_FL].targetAngle=0;
-  Servos[SERVO_FR].targetAngle=0;
-  Servos[SERVO_RL].targetAngle=0;
-  Servos[SERVO_RR].targetAngle=0;
-
-  Servos[SERVO_FL].currentAngle=0;
-  Servos[SERVO_FR].currentAngle=0;
-  Servos[SERVO_RL].currentAngle=0;
-  Servos[SERVO_RR].currentAngle=0;
-
-  Servos[SERVO_FL].initFlag=1;
-  Servos[SERVO_FR].initFlag=1;
-  Servos[SERVO_RL].initFlag=1;
-  Servos[SERVO_RR].initFlag=1;
-
-  // HAL_GPIO_WritePin(GPIOB, GPIO_PIN_8, GPIO_PIN_SET);
-  // HAL_GPIO_WritePin(GPIOC, GPIO_PIN_6, GPIO_PIN_SET);
-  // HAL_GPIO_WritePin(GPIOC, GPIO_PIN_8, GPIO_PIN_SET);
-  // HAL_GPIO_WritePin(GPIOC, GPIO_PIN_9, GPIO_PIN_SET);
-  // dirInit();
+  Servo_t servos;
+  servos.frameID = 0x2A0;
+  servos.frameType = CALIBRATION;
+  canServoFrameSend(servos);
   /* Infinite loop */
   while(1)
   {
-    // if(xQueueReceive(xQueueAngleDateHandle,&servotarget,0)==pdTRUE)
-    // {
-    //    Servos[SERVO_FL].targetAngle=servotarget.targetFrontLeft;
-    //    Servos[SERVO_FR].targetAngle=servotarget.targetFrontRight;
-    //    Servos[SERVO_RL].targetAngle=servotarget.targetRearLeft;
-    //    Servos[SERVO_RR].targetAngle=servotarget.targetRearRight;
-       
-    // }		
-    // TIM1->CCR1=700;
-    // TIM1->ARR=1500;
-    //HAL_GPIO_WritePin(GPIOC,GPIO_PIN_0,0);
-    // HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
-    //TIM12->CCR1=50;
-    // for (i = 0; i < 4; i++)
-    // {
-    //   getCurrentAngle(i, &Servos[i], &hspi3);
-    // } 
-    
-    // Servos[SERVO_FL].dAngle=fabs(Servos[SERVO_FL].targetAngle-Servos[SERVO_FL].currentAngle); 
-    // Servos[SERVO_FR].dAngle=fabs(Servos[SERVO_FR].targetAngle-Servos[SERVO_FR].currentAngle);
-    // Servos[SERVO_RL].dAngle=fabs(Servos[SERVO_RL].targetAngle-Servos[SERVO_RL].currentAngle);
-    // Servos[SERVO_RR].dAngle=fabs(Servos[SERVO_RR].targetAngle-Servos[SERVO_RR].currentAngle);	
-
-    // Servos[SERVO_FL].dir=intSign(Servos[SERVO_FL].targetAngle-Servos[SERVO_FL].currentAngle);
-    // Servos[SERVO_FR].dir=intSign(Servos[SERVO_FR].targetAngle-Servos[SERVO_FR].currentAngle);
-    // Servos[SERVO_RL].dir=intSign(Servos[SERVO_RL].targetAngle-Servos[SERVO_RL].currentAngle);
-    // Servos[SERVO_RR].dir=intSign(Servos[SERVO_RR].targetAngle-Servos[SERVO_RR].currentAngle);
-
-    // gm=Servos[SERVO_FL].dAngle;
-    // if (gm<Servos[SERVO_FR].dAngle) gm=Servos[SERVO_FR].dAngle;
-    // if (gm<Servos[SERVO_RL].dAngle) gm=Servos[SERVO_RL].dAngle;
-    // if (gm<Servos[SERVO_RR].dAngle) gm=Servos[SERVO_RR].dAngle;
-    
-    // TIM1->ARR=150*gm/Servos[SERVO_FL].dAngle;
-    // TIM8->ARR=150*gm/Servos[SERVO_FR].dAngle;
-    // TIM9->ARR=150*gm/Servos[SERVO_RL].dAngle;
-    // TIM12->ARR=150*gm/Servos[SERVO_RR].dAngle;
-    // for (i = 0; i < 4; i++) setServo(Servos[i],i);
+    if(xQueueReceive(xQueueAngleDateHandle,&servos.servoTarget,0)==pdTRUE)
+    {
+      servos.frameType=SET_ANGLE;
+      canServoFrameSend(servos);
+    }		
     vTaskDelay(100);
 	}
   /* USER CODE END vServoControlTask */

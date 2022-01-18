@@ -3,21 +3,6 @@
 #include "main.h"
 #include "MotorControl.h"
 
-#define SERVO_FL 0
-#define SERVO_FR 1
-#define SERVO_RL 2
-#define SERVO_RR 3
-
-typedef struct
-{
-	motorID_t servoId;
-	float currentAngle;
-	float targetAngle;
-	int16_t dir;
-	float dAngle;
-	int16_t initFlag;
-}servo_t;
-
 typedef struct
 {
 	float targetFrontLeft; 
@@ -26,11 +11,20 @@ typedef struct
 	float targetRearRight;   
 }servoTarget_t;
 
-void getCurrentAngle(char i, servo_t* Servo, SPI_HandleTypeDef* hspi);
-// void tim1Init(void);
-// void tim8Init(void);
-// void tim9Init(void);
-//void tim12Init(void);
-void dirInit(void);
-void setServo(servo_t Servos, char i);
+
+typedef enum
+{
+	CALIBRATION=0x01,
+	SET_ANGLE=0x02  
+}servoFrame_t;
+
+typedef struct
+{
+    servoTarget_t servoTarget; 
+	servoFrame_t frameType;
+	uint16_t frameID;
+}Servo_t;
+
+HAL_StatusTypeDef canServoFrameSend(Servo_t servos);
+
 #endif

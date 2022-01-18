@@ -1,6 +1,7 @@
 #ifndef SBUS
 #define SBUS
 
+//#include "dma.h"
 #include "usart.h"
 
 #define RIGHT_VERT 1 //342-1706
@@ -12,15 +13,10 @@
 #define AILDR 6 //342-1702
 #define GEAR 7 //342-1702
 
+uint16_t channels[18];
 
-
-void tim2Init1(void);
-void tim2Init2(void);
-void tim3Init1(void);
-void tim3Init2(void);
-void tim4Init1(void);
-void tim4Init2(void);
-void tim5Init1(void);
-void tim5Init2(void);
+//void receiveSBusDate(uint16_t * channels);
+void receiveSBusDate(void);
+void uartRxDMATransferCallback(DMA_HandleTypeDef *dmaHandle);
 
 #endif
